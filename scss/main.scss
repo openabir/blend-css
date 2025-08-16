@@ -1,0 +1,41 @@
+/* =========================================================
+   Hybrid CSS Framework - Master File
+   Imports everything: base → classless → utilities → components → themes
+   ========================================================= */
+
+/* -----------------------
+   1. Base (foundation)
+----------------------- */
+@import "./base/reset.css";
+@import "./base/tokens.css";
+@import "./base/typography.css";
+
+/* -----------------------
+   2. Classless (semantic HTML styles)
+----------------------- */
+@import "./classless/elements.css";
+@import "./classless/layout.css";
+
+/* -----------------------
+   3. Utilities (atomic classes)
+----------------------- */
+@import "./utilities/spacing.css";
+@import "./utilities/flex.css";
+@import "./utilities/grid.css";
+@import "./utilities/colors.css";
+@import "./utilities/typography.css";
+
+/* -----------------------
+   4. Components (reusable patterns)
+----------------------- */
+@import "./components/buttons.css";
+@import "./components/cards.css";
+@import "./components/navbar.css";
+@import "./components/modals.css";
+@import "./components/forms.css";
+
+/* -----------------------
+   5. Themes (light/dark, etc.)
+----------------------- */
+@import "./themes/light.css";
+@import "./themes/dark.css";

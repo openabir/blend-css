@@ -1,0 +1,573 @@
+/* =========================================================
+   Complete CSS Reset - Removes all browser default styling
+   SCSS Version with variables and nesting
+   ========================================================= */
+
+// Variables for consistent values
+$reset-font-size: 100%;
+$reset-line-height: 1.15;
+$reset-outline-width: 2px;
+$reset-outline-offset: 2px;
+
+/* 1. Universal reset for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* 2. HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* 3. Root element reset */
+html {
+  font-size: $reset-font-size;
+  line-height: $reset-line-height;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+/* 4. Body reset */
+body {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 5. Heading elements */
+%heading-reset {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %heading-reset;
+}
+
+/* 6. Text elements */
+%text-reset {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+p,
+span,
+div,
+section,
+article,
+aside,
+header,
+footer,
+main {
+  @extend %text-reset;
+}
+
+/* 7. List elements */
+%list-reset {
+  list-style: none;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ol,
+li {
+  @extend %list-reset;
+}
+
+/* 8. Link elements */
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+}
+
+/* 9. Form elements */
+%form-reset {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  @extend %form-reset;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+input {
+  &[type="search"] {
+    appearance: textfield;
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+/* 10. Table elements */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: inherit;
+}
+
+th,
+td {
+  padding: 0;
+  text-align: left;
+  font-weight: inherit;
+  vertical-align: top;
+}
+
+/* 11. Media elements */
+%media-reset {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  outline: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+audio {
+  @extend %media-reset;
+}
+
+img {
+  font-style: italic;
+  vertical-align: middle;
+}
+
+svg {
+  fill: currentColor;
+}
+
+/* 12. Quote elements */
+blockquote,
+q {
+  quotes: none;
+
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+/* 13. Code elements */
+%code-reset {
+  font-family: monospace, monospace;
+  font-size: inherit;
+}
+
+code,
+kbd,
+pre,
+samp {
+  @extend %code-reset;
+}
+
+pre {
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+/* 14. Interactive elements */
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+/* 15. Hidden elements */
+[hidden],
+template {
+  display: none !important;
+}
+
+/* 16. Focus reset */
+:focus {
+  outline: none;
+
+  &-visible {
+    outline: $reset-outline-width solid currentColor;
+    outline-offset: $reset-outline-offset;
+  }
+}
+
+/* 17. Selection reset */
+::selection {
+  background: transparent;
+}
+
+::-moz-selection {
+  background: transparent;
+}
+
+/* 18. Scrollbar reset (Webkit) */
+::-webkit-scrollbar {
+  width: auto;
+  height: auto;
+
+  &-track {
+    background: transparent;
+  }
+
+  &-thumb {
+    background: transparent;
+  }
+}
+
+/* 19. Text decoration reset */
+%italic-reset {
+  font-style: normal;
+}
+
+%bold-reset {
+  font-weight: inherit;
+}
+
+%decoration-reset {
+  text-decoration: none;
+}
+
+em,
+i {
+  @extend %italic-reset;
+}
+
+strong,
+b {
+  @extend %bold-reset;
+}
+
+u,
+s,
+strike,
+del {
+  @extend %decoration-reset;
+}
+
+/* 20. Small elements */
+small {
+  font-size: inherit;
+}
+
+/* 21. Subscript and superscript */
+%sub-sup-reset {
+  font-size: inherit;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub,
+sup {
+  @extend %sub-sup-reset;
+}
+
+sub {
+  bottom: 0;
+}
+
+sup {
+  top: 0;
+}
+
+/* 22. Abbreviation */
+abbr {
+  &[title] {
+    border-bottom: none;
+    text-decoration: none;
+  }
+}
+
+/* 23. Mark element */
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* 24. Progress element */
+progress {
+  vertical-align: baseline;
+}
+
+/* 25. Ruby element */
+ruby {
+  display: inline;
+
+  rt {
+    font-size: inherit;
+  }
+}
+
+/* 26. Definition list */
+%definition-reset {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+dl,
+dt,
+dd {
+  @extend %definition-reset;
+}
+
+/* 27. HR element */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+/* 28. Address element */
+address {
+  font-style: normal;
+}
+
+/* 29. Time element */
+time {
+  font-size: inherit;
+}
+
+/* 30. Figure element */
+figure {
+  margin: 0;
+
+  figcaption {
+    font-size: inherit;
+  }
+}
+
+/* 31. Iframe */
+iframe {
+  border: 0;
+}
+
+/* 32. Object and embed */
+%embed-reset {
+  max-width: 100%;
+}
+
+object,
+embed {
+  @extend %embed-reset;
+}
+
+/* 33. Meter element */
+meter {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* 34. Output element */
+output {
+  display: inline-block;
+}
+
+/* 35. Data element */
+data {
+  font-size: inherit;
+}
+
+/* 36. Variable element */
+var {
+  font-style: normal;
+}
+
+/* 37. Keyboard element */
+kbd {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* 38. Sample element */
+samp {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* 39. Cite element */
+cite {
+  font-style: normal;
+}
+
+/* 40. Definition element */
+dfn {
+  font-style: normal;
+}
+
+/* 41. Inserted and deleted text */
+ins {
+  text-decoration: none;
+  background: transparent;
+}
+
+del {
+  text-decoration: none;
+}
+
+/* 42. Wbr element */
+wbr {
+  font-size: inherit;
+}
+
+/* 43. Bdi and bdo elements */
+%direction-reset {
+  direction: inherit;
+}
+
+bdi,
+bdo {
+  @extend %direction-reset;
+}
+
+// Mixins for reusable reset patterns
+@mixin reset-element {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+@mixin reset-appearance {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@mixin reset-outline(
+  $width: $reset-outline-width,
+  $offset: $reset-outline-offset
+) {
+  outline: none;
+
+  &:focus-visible {
+    outline: $width solid currentColor;
+    outline-offset: $offset;
+  }
+}
+
+// Utility classes for manual resets (optional)
+.reset {
+  &-margin {
+    margin: 0 !important;
+  }
+
+  &-padding {
+    padding: 0 !important;
+  }
+
+  &-border {
+    border: 0 !important;
+  }
+
+  &-outline {
+    outline: none !important;
+  }
+
+  &-appearance {
+    @include reset-appearance;
+  }
+
+  &-all {
+    @include reset-element;
+    @include reset-appearance;
+    @include reset-outline;
+  }
+}
