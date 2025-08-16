@@ -1,0 +1,40 @@
+{
+  "name": "blendcss",
+  "version": "1.0.0-dev",
+  "description": "A modern, hybrid CSS framework that seamlessly blends classless semantic HTML styling with powerful utility classes and customizable components.",
+  "main": "css/blend.css",
+  "scripts": {
+    "build": "sass scss/main.scss css/blend.css --style=expanded",
+    "build:prod": "sass scss/main.scss css/blend.min.css --style=compressed",
+    "watch": "sass --watch scss/main.scss:css/blend.css --style=expanded",
+    "dev": "sass --watch scss/main.scss:css/blend.css --style=expanded",
+    "clean": "del css/* 2>nul || true"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "framework",
+    "classless",
+    "utilities",
+    "components",
+    "hybrid",
+    "dark-mode",
+    "responsive"
+  ],
+  "author": "openabir",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openabir/blend-css.git"
+  },
+  "homepage": "https://github.com/openabir/blend-css",
+  "bugs": {
+    "url": "https://github.com/openabir/blend-css/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
