@@ -1,24 +1,135 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: 1.5;
-  color: #333;
-  background-color: #fff;
+/* =========================================================
+   Typography Foundation - Uses design tokens from variables
+   ========================================================= */
+
+/* Root font settings */
+html {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--text-color-primary);
+  background-color: var(--bg-color-primary);
 }
 
+body {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: inherit;
+}
+
+/* Headings */
 h1,
 h2,
 h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--text-color-primary);
+  margin-bottom: var(--space-4);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+h2 {
+  font-size: var(--font-size-3xl);
+}
+h3 {
+  font-size: var(--font-size-2xl);
+}
 h4 {
-  margin-bottom: 0.5em;
-  font-weight: 600;
+  font-size: var(--font-size-xl);
+}
+h5 {
+  font-size: var(--font-size-lg);
+}
+h6 {
+  font-size: var(--font-size-base);
 }
 
+/* Text elements */
 p {
-  margin-bottom: 1em;
+  margin-bottom: var(--space-4);
+  color: var(--text-color-primary);
+  line-height: var(--line-height-relaxed);
 }
 
+/* Links */
 a {
-  color: #007bff;
+  color: var(--text-color-link);
   text-decoration: none;
+  transition: color var(--duration-150) var(--ease-in-out);
+
+  &:hover,
+  &:focus {
+    color: var(--text-color-link-hover);
+  }
+
+  &:focus-visible {
+    outline: var(--focus-ring-width) solid var(--focus-ring-color);
+    outline-offset: var(--focus-ring-offset-width);
+  }
+}
+
+/* Text styling elements */
+strong,
+b {
+  font-weight: var(--font-weight-bold);
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-secondary);
+}
+
+/* Code elements */
+code,
+kbd,
+samp {
+  font-family: var(--font-family-mono);
+  font-size: 0.9em;
+  background-color: var(--bg-color-muted);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--border-radius-sm);
+}
+
+pre {
+  font-family: var(--font-family-mono);
+  background-color: var(--bg-color-muted);
+  padding: var(--space-4);
+  border-radius: var(--border-radius-md);
+  overflow-x: auto;
+  margin-bottom: var(--space-4);
+
+  code {
+    background: none;
+    padding: 0;
+  }
+}
+
+/* Blockquotes */
+blockquote {
+  margin: var(--space-6) 0;
+  padding-left: var(--space-6);
+  border-left: var(--border-width-4) solid var(--border-color-accent);
+  color: var(--text-color-secondary);
+  font-style: italic;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  height: var(--border-width-1);
+  background-color: var(--border-color-primary);
+  margin: var(--space-8) 0;
 }
