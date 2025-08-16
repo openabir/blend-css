@@ -10,7 +10,7 @@
 
 ## ⚠️ Development Status
 
-BlendCSS is currently under active development. The framework is not yet ready for production use. We're working hard to deliver a comprehensive solution that combines the best of classless, utility-first, and component-based CSS approaches.
+BlendCSS is currently under active development by a solo developer. The framework is not yet ready for production use. I'm working hard to deliver a comprehensive solution that combines the best of classless, utility-first, and component-based CSS approaches.
 
 ## ✨ What Makes BlendCSS Different?
 
@@ -171,50 +171,53 @@ npm run watch
 
 ## 🤝 Contributing
 
-We welcome contributions from developers of all skill levels! BlendCSS is an open-source project that thrives on community input.
+I welcome contributions from developers of all skill levels! While BlendCSS is a solo project, I believe in the power of community collaboration and would love your help making it better.
 
-### Ways to Contribute
+### Ways to Help
 
-- 🐛 **Report Bugs** - Help us identify and fix issues
+- 🐛 **Report Bugs** - Help me identify and fix issues
 - 💡 **Suggest Features** - Share ideas for new functionality
-- 📝 **Improve Documentation** - Help make our docs clearer
+- 📝 **Improve Documentation** - Help make the docs clearer
 - 🔧 **Submit Code** - Fix bugs or implement new features
 - 🎨 **Design Input** - Contribute to UI/UX decisions
 - 🧪 **Testing** - Help test across different browsers and devices
+- 📢 **Spread the Word** - Share the project with others
 
 ### Getting Started
 
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally
 3. **Create a feature branch** from `main`
-4. **Make your changes** following our guidelines
+4. **Make your changes** following the guidelines below
 5. **Test your changes** thoroughly
 6. **Submit a pull request** with a clear description
 
 ### Development Guidelines
 
+Since I'm working solo, maintaining consistency is crucial:
+
 - Follow existing code style and conventions
 - Write clear, descriptive commit messages
-- Add tests for new features when applicable
-- Update documentation for any API changes
-- Ensure cross-browser compatibility
+- Comment complex logic and design decisions
+- Keep lines under 100 characters when possible
+- Use meaningful variable and mixin names
 - Test responsive behavior on different screen sizes
 
 ### Code Style
 
 - Use 2 spaces for indentation
 - Follow BEM naming convention for CSS classes
-- Comment complex logic and design decisions
-- Keep lines under 100 characters when possible
-- Use meaningful variable and mixin names
+- Use semantic HTML5 elements
+- Prioritize accessibility
+- Write mobile-first responsive CSS
 
 ### Pull Request Process
 
 1. Ensure your code follows the style guidelines
-2. Update the README.md if needed
-3. Add or update tests as appropriate
-4. Ensure all tests pass
-5. Request review from maintainers
+2. Update documentation if needed
+3. Test across multiple browsers
+4. Provide clear description of changes
+5. Be patient - as a solo developer, review may take time
 
 ### Reporting Issues
 
@@ -226,38 +229,38 @@ When reporting bugs, please include:
 - Screenshots if applicable
 - Minimal code example demonstrating the issue
 
-Use our [issue templates](https://github.com/openabir/blend-css/issues/new/choose) to ensure you provide all necessary information.
-
 ### Feature Requests
 
-We love hearing your ideas! When suggesting features:
+I love hearing new ideas! When suggesting features:
 
 - Explain the use case and problem it solves
 - Provide examples of how it would be used
-- Consider how it fits with existing functionality
+- Consider how it fits with the existing architecture
 - Check if similar functionality already exists
 
-## 👥 Contributors
+## 👤 About the Developer
 
-Thanks to all the amazing people who have contributed to BlendCSS:
+**[openabir](https://github.com/openabir)** - Creator & Solo Developer
 
-<!-- Contributors will be automatically updated -->
-<a href="https://github.com/openabir/blend-css/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=openabir/blend-css" />
-</a>
+I'm passionate about creating tools that make web development more enjoyable and efficient. BlendCSS is my attempt to solve the common dilemma of choosing between different CSS approaches by combining the best of all worlds.
 
-### Core Team
+### Why I Built BlendCSS
 
-- **[openabir](https://github.com/openabir)** - Creator & Lead Developer
+As a developer, I've always been torn between the simplicity of classless CSS frameworks and the flexibility of utility-first approaches. I wanted something that could:
 
-### Recognition
+- Work beautifully out of the box without any classes
+- Provide utility classes when I need precise control
+- Include pre-built components for common patterns
+- Support modern features like dark mode
+- Be easily customizable for different projects
 
-We believe in recognizing all forms of contribution. Contributors will be acknowledged in:
+BlendCSS is my solution to this challenge.
 
-- This README file
-- Release notes for significant contributions
-- Special mention in project documentation
-- Potential invitation to join the core team
+### Connect With Me
+
+- 🐙 GitHub: [@openabir](https://github.com/openabir)
+- 💬 Discussions: [Project Discussions](https://github.com/openabir/blend-css/discussions)
+- 🐛 Issues: [Report Issues](https://github.com/openabir/blend-css/issues)
 
 ## 📊 Project Status
 
@@ -270,7 +273,7 @@ We believe in recognizing all forms of contribution. Contributors will be acknow
 - ⏳ **Components Layer** - UI Components (Planned)
 - ⏳ **Themes Layer** - Light/Dark Modes (Planned)
 
-### Roadmap
+### Development Roadmap
 
 **Phase 1: Foundation** (Current)
 
@@ -296,15 +299,22 @@ We believe in recognizing all forms of contribution. Contributors will be acknow
 - Create theme customization system
 - Build color scheme variants
 
-**Phase 5: Optimization**
+**Phase 5: Polish & Release**
 
 - Performance optimization
 - Bundle size reduction
 - Browser compatibility testing
+- Documentation and examples
+
+### Timeline
+
+This is a passion project developed in my spare time. While I don't have strict deadlines, I'm committed to steady progress and regular updates.
 
 ## 📄 License
 
 MIT License - see the [LICENSE](LICENSE) file for details.
+
+This means you're free to use, modify, and distribute BlendCSS in your projects, both personal and commercial.
 
 ## 🙏 Acknowledgments
 
@@ -323,10 +333,10 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 ---
 
 <div align="center">
-    <p>Made with ❤️ by <a href="https://github.com/openabir">openabir</a> and <a href="https://github.com/openabir/blend-css/graphs/contributors">contributors</a></p>
+    <p>Made with ❤️ by <a href="https://github.com/openabir">openabir</a></p>
     <p>
         <a href="https://github.com/openabir/blend-css/stargazers">⭐ Star us on GitHub</a> •
         <a href="https://github.com/openabir/blend-css/fork">🍴 Fork the project</a> •
-        <a href="https://github.com/openabir/blend-css/discussions">💬 Join discussions</a>
+        <a href="https://github.com/openabir/blend-css/discussions">💬 Join the discussion</a>
     </p>
 </div>
