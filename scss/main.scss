@@ -1,41 +1,41 @@
 /* =========================================================
-   Hybrid CSS Framework - Master File
-   Imports everything: base → classless → utilities → components → themes
+   BlendCSS - Hybrid CSS Framework
+   Imports: base → classless → utilities → components → themes
    ========================================================= */
 
 /* -----------------------
    1. Base (foundation)
 ----------------------- */
-@import "./base/reset.css";
-@import "./base/tokens.css";
-@import "./base/typography.css";
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/typography";
 
 /* -----------------------
    2. Classless (semantic HTML styles)
 ----------------------- */
-@import "./classless/elements.css";
-@import "./classless/layout.css";
+@import "./classless/elements";
+@import "./classless/layout";
 
 /* -----------------------
    3. Utilities (atomic classes)
 ----------------------- */
-@import "./utilities/spacing.css";
-@import "./utilities/flex.css";
-@import "./utilities/grid.css";
-@import "./utilities/colors.css";
-@import "./utilities/typography.css";
+@import "./utilities/spacing";
+@import "./utilities/flex";
+@import "./utilities/grid";
+@import "./utilities/colors";
+@import "./utilities/typography";
 
 /* -----------------------
    4. Components (reusable patterns)
 ----------------------- */
-@import "./components/buttons.css";
-@import "./components/cards.css";
-@import "./components/navbar.css";
-@import "./components/modals.css";
-@import "./components/forms.css";
+@import "./components/buttons";
+@import "./components/cards";
+@import "./components/navbar";
+@import "./components/modals";
+@import "./components/forms";
 
 /* -----------------------
    5. Themes (light/dark, etc.)
 ----------------------- */
-@import "./themes/light.css";
-@import "./themes/dark.css";
+@import "./themes/light";
+@import "./themes/dark";
