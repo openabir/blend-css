@@ -1,0 +1,170 @@
+/* =========================================================
+   Classless Elements - Beautiful HTML without classes
+   ========================================================= */
+
+/* Lists */
+ul,
+ol {
+  margin-bottom: var(--space-4);
+  padding-left: var(--space-6);
+}
+
+ul {
+  list-style-type: disc;
+
+  ul {
+    list-style-type: circle;
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+  }
+}
+
+ol {
+  list-style-type: decimal;
+
+  ol {
+    list-style-type: lower-alpha;
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+  }
+}
+
+li {
+  margin-bottom: var(--space-2);
+}
+
+/* Definition lists */
+dl {
+  margin-bottom: var(--space-4);
+}
+
+dt {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-1);
+}
+
+dd {
+  margin-left: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-6);
+}
+
+th,
+td {
+  padding: var(--space-3);
+  text-align: left;
+  border-bottom: var(--border-width-1) solid var(--border-color-primary);
+}
+
+th {
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color-primary);
+}
+
+tr:hover {
+  background-color: var(--bg-color-muted);
+}
+
+/* Forms */
+form {
+  margin-bottom: var(--space-6);
+}
+
+fieldset {
+  border: var(--border-width-1) solid var(--border-color-primary);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+legend {
+  font-weight: var(--font-weight-semibold);
+  padding: 0 var(--space-2);
+  color: var(--text-color-primary);
+}
+
+label {
+  display: block;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-2);
+  color: var(--text-color-primary);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: var(--input-padding-y) var(--input-padding-x);
+  font-size: var(--input-font-size);
+  border: var(--input-border-width) solid var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-primary);
+  margin-bottom: var(--space-4);
+  transition: border-color var(--duration-150) var(--ease-in-out);
+
+  &:focus {
+    outline: none;
+    border-color: var(--input-focus-border-color);
+    box-shadow: 0 0 0 var(--input-focus-ring-width)
+      var(--input-focus-ring-color);
+  }
+}
+
+button {
+  padding: var(--button-padding-y) var(--button-padding-x);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  border: var(--button-border-width) solid var(--color-primary-600);
+  border-radius: var(--button-border-radius);
+  background-color: var(--color-primary-600);
+  color: var(--color-neutral-0);
+  cursor: pointer;
+  transition: var(--button-transition);
+
+  &:hover {
+    background-color: var(--color-primary-700);
+    border-color: var(--color-primary-700);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+/* Media elements */
+img,
+video,
+audio,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: var(--space-6) 0;
+
+  img {
+    border-radius: var(--border-radius-md);
+  }
+
+  figcaption {
+    margin-top: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--text-color-secondary);
+    text-align: center;
+  }
+}
