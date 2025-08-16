@@ -1,0 +1,31 @@
+/* =========================================================
+   Light Theme - Default theme variables
+   ========================================================= */
+
+:root {
+  /* Theme identifier */
+  --theme: "light";
+
+  /* Light theme color overrides */
+  --bg-color-primary: var(--color-neutral-0);
+  --bg-color-secondary: var(--color-neutral-50);
+  --bg-color-muted: var(--color-neutral-100);
+
+  --text-color-primary: var(--color-neutral-900);
+  --text-color-secondary: var(--color-neutral-600);
+  --text-color-muted: var(--color-neutral-500);
+  --text-color-link: var(--color-primary-600);
+  --text-color-link-hover: var(--color-primary-700);
+
+  --border-color-primary: var(--color-neutral-200);
+  --border-color-secondary: var(--color-neutral-300);
+  --border-color-accent: var(--color-primary-200);
+
+  /* Form elements in light theme */
+  --input-border-color: var(--color-neutral-300);
+  --input-focus-border-color: var(--color-primary-500);
+  --input-focus-ring-color: rgb(59 130 246 / 0.1);
+
+  /* Focus ring */
+  --focus-ring-color: rgb(59 130 246 / 0.5);
+}

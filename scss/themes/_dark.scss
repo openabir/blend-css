@@ -1,0 +1,62 @@
+/* =========================================================
+   Dark Theme - Dark mode variables
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Theme identifier */
+    --theme: "dark";
+
+    /* Dark theme color overrides */
+    --bg-color-primary: var(--color-neutral-900);
+    --bg-color-secondary: var(--color-neutral-800);
+    --bg-color-muted: var(--color-neutral-700);
+
+    --text-color-primary: var(--color-neutral-100);
+    --text-color-secondary: var(--color-neutral-300);
+    --text-color-muted: var(--color-neutral-400);
+    --text-color-link: var(--color-primary-400);
+    --text-color-link-hover: var(--color-primary-300);
+
+    --border-color-primary: var(--color-neutral-700);
+    --border-color-secondary: var(--color-neutral-600);
+    --border-color-accent: var(--color-primary-800);
+
+    /* Form elements in dark theme */
+    --input-border-color: var(--color-neutral-600);
+    --input-focus-border-color: var(--color-primary-500);
+    --input-focus-ring-color: rgb(59 130 246 / 0.2);
+
+    /* Focus ring */
+    --focus-ring-color: rgb(59 130 246 / 0.7);
+  }
+}
+
+/* Manual dark mode class override */
+[data-theme="dark"] {
+  /* Theme identifier */
+  --theme: "dark";
+
+  /* Dark theme color overrides */
+  --bg-color-primary: var(--color-neutral-900);
+  --bg-color-secondary: var(--color-neutral-800);
+  --bg-color-muted: var(--color-neutral-700);
+
+  --text-color-primary: var(--color-neutral-100);
+  --text-color-secondary: var(--color-neutral-300);
+  --text-color-muted: var(--color-neutral-400);
+  --text-color-link: var(--color-primary-400);
+  --text-color-link-hover: var(--color-primary-300);
+
+  --border-color-primary: var(--color-neutral-700);
+  --border-color-secondary: var(--color-neutral-600);
+  --border-color-accent: var(--color-primary-800);
+
+  /* Form elements in dark theme */
+  --input-border-color: var(--color-neutral-600);
+  --input-focus-border-color: var(--color-primary-500);
+  --input-focus-ring-color: rgb(59 130 246 / 0.2);
+
+  /* Focus ring */
+  --focus-ring-color: rgb(59 130 246 / 0.7);
+}
