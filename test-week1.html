@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlendCSS - Week 1 Progress Test</title>
+    <link rel="stylesheet" href="css/blend.css" />
+    <style>
+      /* Quick theme toggle for testing */
+      .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 8px 16px;
+        background: var(--color-primary-600);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      Toggle Dark Mode
+    </button>
+
+    <main>
+      <article>
+        <header>
+          <h1>BlendCSS Framework</h1>
+          <p>
+            <em
+              >Week 1 Progress: Foundation, Build System & Enhanced
+              Typography</em
+            >
+          </p>
+        </header>
+
+        <section>
+          <h2>Typography Showcase</h2>
+          <p>
+            This demonstrates the enhanced typography system using CSS custom
+            properties. The framework now includes:
+          </p>
+
+          <h3>Heading Hierarchy</h3>
+          <h1>Heading 1 - Display Text</h1>
+          <h2>Heading 2 - Large Section</h2>
+          <h3>Heading 3 - Medium Section</h3>
+          <h4>Heading 4 - Small Section</h4>
+          <h5>Heading 5 - Subsection</h5>
+          <h6>Heading 6 - Minor Heading</h6>
+
+          <h3>Text Elements</h3>
+          <p>
+            This is a regular paragraph with <strong>bold text</strong>,
+            <em>italic text</em>, and <a href="#">a link</a>. Notice how the
+            styling automatically adapts to light and dark themes.
+          </p>
+
+          <p>
+            <small>This is small text that uses secondary text color.</small>
+          </p>
+
+          <blockquote>
+            This is a blockquote that demonstrates the beautiful default styling
+            without requiring any CSS classes.
+          </blockquote>
+
+          <hr />
+
+          <h3>Code Elements</h3>
+          <p>Inline code: <code>const framework = 'BlendCSS';</code></p>
+
+          <pre><code>// Code block example
+function createFramework() {
+    return {
+        name: 'BlendCSS',
+        type: 'hybrid',
+        features: ['classless', 'utilities', 'components']
+    };
+}</code></pre>
+        </section>
+
+        <section>
+          <h2>Lists & Structure</h2>
+
+          <h3>Unordered List</h3>
+          <ul>
+            <li>Classless styling for semantic HTML</li>
+            <li>Utility classes for precise control</li>
+            <li>
+              Pre-built components for complex patterns
+              <ul>
+                <li>Nested list item</li>
+                <li>Another nested item</li>
+              </ul>
+            </li>
+            <li>Built-in dark mode support</li>
+          </ul>
+
+          <h3>Ordered List</h3>
+          <ol>
+            <li>Set up build system ✅</li>
+            <li>Create foundation layer ✅</li>
+            <li>Implement typography ✅</li>
+            <li>Add classless elements ✅</li>
+            <li>Build utility classes (Week 2)</li>
+          </ol>
+
+          <h3>Definition List</h3>
+          <dl>
+            <dt>BlendCSS</dt>
+            <dd>
+              A hybrid CSS framework combining classless, utility-first, and
+              component-based approaches
+            </dd>
+
+            <dt>Week 1 Goals</dt>
+            <dd>Foundation setup, build system, and enhanced typography</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>Tables</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Status</th>
+                <th>Week</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CSS Reset</td>
+                <td>✅ Complete</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Design Tokens</td>
+                <td>✅ Complete</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Typography</td>
+                <td>✅ Complete</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Classless Elements</td>
+                <td>✅ Complete</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Build System</td>
+                <td>✅ Complete</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Forms</h2>
+          <form>
+            <fieldset>
+              <legend>Contact Information</legend>
+
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+              />
+
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+              />
+
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Your message here..."
+              ></textarea>
+
+              <button type="submit">Send Message</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <section>
+          <h2>Interactive Elements</h2>
+
+          <details>
+            <summary>Click to see framework details</summary>
+            <p>
+              BlendCSS is designed to solve the common dilemma of choosing
+              between different CSS approaches. It provides beautiful defaults
+              while offering the flexibility to use utilities and components
+              when needed.
+            </p>
+          </details>
+
+          <details>
+            <summary>Week 1 Achievements</summary>
+            <ul>
+              <li>✅ Package.json with Sass build system</li>
+              <li>✅ Fixed import structure (.css → .scss)</li>
+              <li>✅ Enhanced typography with design tokens</li>
+              <li>✅ Classless elements and layout</li>
+              <li>✅ Light/dark theme foundation</li>
+              <li>✅ 34KB compiled CSS (unminified)</li>
+            </ul>
+          </details>
+        </section>
+
+        <footer>
+          <address>
+            <strong>BlendCSS Framework</strong><br />
+            Created by <a href="https://github.com/openabir">@openabir</a><br />
+            <small>Week 1 Progress - August 2025</small>
+          </address>
+        </footer>
+      </article>
+    </main>
+
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        html.setAttribute("data-theme", newTheme);
+      }
+    </script>
+  </body>
+</html>
