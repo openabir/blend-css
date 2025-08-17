@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlendCSS - Week 1 Progress Test</title>
+    <link rel="stylesheet" href="css/blend.css" />
+    <style>
+      /* Quick theme toggle for testing */
+      .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 8px 16px;
+        background: var(--color-primary-600);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      /* Color palette showcase */
+      .color-demo {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+
+      .color-swatch {
+        height: 60px;
+        border-radius: 8px;
+        display: flex;
+        align-items: end;
+        padding: 0.5rem;
+        color: white;
+        font-size: 0.75rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+    <main>
+      <article>
+        <header>
+          <h1>BlendCSS Framework</h1>
+          <p>
+            <em
+              >Week 1 Progress: Foundation, Build System & Enhanced
+              Typography</em
+            >
+          </p>
+        </header>
+
+        <section>
+          <h2>Typography Showcase</h2>
+          <p>
+            This demonstrates the enhanced typography system using CSS custom
+            properties. The framework now includes:
+          </p>
+
+          <h3>Heading Hierarchy</h3>
+          <h1>Heading 1 - Display Text</h1>
+          <h2>Heading 2 - Large Section</h2>
+          <h3>Heading 3 - Medium Section</h3>
+          <h4>Heading 4 - Small Section</h4>
+          <h5>Heading 5 - Subsection</h5>
+          <h6>Heading 6 - Minor Heading</h6>
+
+          <h3>Text Elements</h3>
+          <p>
+            This is a regular paragraph with <strong>bold text</strong>,
+            <em>italic text</em>, and <a href="#">a link</a>. Notice how the
+            styling automatically adapts to light and dark themes.
+          </p>
+
+          <p>
+            <small>This is small text that uses secondary text color.</small>
+          </p>
+
+          <blockquote>
+            This is a blockquote that demonstrates the beautiful default styling
+            without requiring any CSS classes.
+          </blockquote>
+
+          <hr />
+
+          <h3>Code Elements</h3>
+          <p>Inline code: <code>const framework = 'BlendCSS';</code></p>
+
+          <pre><code>// Code block example
+function createFramework() {
+    return {
+        name: 'BlendCSS',
+        type: 'hybrid',
+        features: ['classless', 'utilities', 'components']
+    };
+}</code></pre>
+        </section>
+
+        <section>
+          <h2>🎨 New Color Palette Showcase</h2>
+          <p>
+            BlendCSS now features a warm orange color system based on your core
+            color
+            <strong style="color: var(--color-primary-600)">#d97706</strong>.
+            This creates an energetic, professional, and accessible design
+            system.
+          </p>
+
+          <h3>Primary Colors (Warm Orange)</h3>
+          <div class="color-demo">
+            <div
+              class="color-swatch"
+              style="background: var(--color-primary-500)"
+            >
+              Primary 500
+            </div>
+            <div
+              class="color-swatch"
+              style="background: var(--color-primary-600)"
+            >
+              Primary 600 (Core)
+            </div>
+            <div
+              class="color-swatch"
+              style="background: var(--color-primary-700)"
+            >
+              Primary 700
+            </div>
+            <div
+              class="color-swatch"
+              style="background: var(--color-primary-800)"
+            >
+              Primary 800
+            </div>
+          </div>
+
+          <h3>Secondary Colors (Cool Blue)</h3>
+          <div class="color-demo">
+            <div
+              class="color-swatch"
+              style="background: var(--color-secondary-500)"
+            >
+              Secondary 500
+            </div>
+            <div
+              class="color-swatch"
+              style="background: var(--color-secondary-600)"
+            >
+              Secondary 600
+            </div>
+            <div
+              class="color-swatch"
+              style="background: var(--color-secondary-700)"
+            >
+              Secondary 700
+            </div>
+            <div
+              class="color-swatch"
+              style="background: var(--color-secondary-800)"
+            >
+              Secondary 800
+            </div>
+          </div>
+
+          <h3>Accent Colors (Warm Amber)</h3>
+          <div class="color-demo">
+            <div
+              class="color-swatch"
+              style="background: var(--color-accent-500)"
+            >
+              Accent 500
+            </div>
+            <div
+              class="color-swatch"
+              style="background: var(--color-accent-600)"
+            >
+              Accent 600
+            </div>
+            <div
+              class="color-swatch"
+              style="background: var(--color-accent-700)"
+            >
+              Accent 700
+            </div>
+            <div
+              class="color-swatch"
+              style="background: var(--color-accent-800)"
+            >
+              Accent 800
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Lists & Structure</h2>
+
+          <h3>Unordered List</h3>
+          <ul>
+            <li>Classless styling for semantic HTML</li>
+            <li>Utility classes for precise control</li>
+            <li>
+              Pre-built components for complex patterns
+              <ul>
+                <li>Nested list item</li>
+                <li>Another nested item</li>
+              </ul>
+            </li>
+            <li>Built-in dark mode support</li>
+          </ul>
+
+          <h3>Ordered List</h3>
+          <ol>
+            <li>Set up build system ✅</li>
+            <li>Create foundation layer ✅</li>
+            <li>Implement typography ✅</li>
+            <li>Add classless elements ✅</li>
+            <li>Build utility classes (Week 2)</li>
+          </ol>
+
+          <h3>Definition List</h3>
+          <dl>
+            <dt>BlendCSS</dt>
+            <dd>
+              A hybrid CSS framework combining classless, utility-first, and
+              component-based approaches
+            </dd>
+
+            <dt>Week 1 Goals</dt>
+            <dd>Foundation setup, build system, and enhanced typography</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>Tables</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Status</th>
+                <th>Week</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CSS Reset</td>
+                <td>✅ Complete</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Design Tokens</td>
+                <td>✅ Complete</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Typography</td>
+                <td>✅ Complete</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Classless Elements</td>
+                <td>✅ Complete</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Build System</td>
+                <td>✅ Complete</td>
+                <td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Forms</h2>
+          <form>
+            <fieldset>
+              <legend>Contact Information</legend>
+
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+              />
+
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+              />
+
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Your message here..."
+              ></textarea>
+
+              <button type="submit">Send Message</button>
+            </fieldset>
+          </form>
+        </section>
+
+        <section>
+          <h2>Interactive Elements</h2>
+
+          <details>
+            <summary>Click to see framework details</summary>
+            <p>
+              BlendCSS is designed to solve the common dilemma of choosing
+              between different CSS approaches. It provides beautiful defaults
+              while offering the flexibility to use utilities and components
+              when needed.
+            </p>
+          </details>
+
+          <details>
+            <summary>Week 1 Achievements</summary>
+            <ul>
+              <li>✅ Package.json with Sass build system</li>
+              <li>✅ Fixed import structure (.css → .scss)</li>
+              <li>✅ Enhanced typography with design tokens</li>
+              <li>✅ Classless elements and layout</li>
+              <li>✅ Light/dark theme foundation</li>
+              <li>✅ 34KB compiled CSS (unminified)</li>
+            </ul>
+          </details>
+        </section>
+
+        <footer>
+          <address>
+            <strong>BlendCSS Framework</strong><br />
+            Created by <a href="https://github.com/openabir">@openabir</a><br />
+            <small>Week 1 Progress - August 2025</small>
+          </address>
+        </footer>
+      </article>
+    </main>
+
+    <script>
+      // Initialize theme on page load
+      function initTheme() {
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem("theme");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+
+        // Use saved theme, or fall back to system preference
+        const initialTheme =
+          savedTheme || (systemPrefersDark ? "dark" : "light");
+        html.setAttribute("data-theme", initialTheme);
+        updateToggleButton(initialTheme);
+      }
+
+      function toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute("data-theme") || "light";
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+        html.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+        updateToggleButton(newTheme);
+      }
+
+      function updateToggleButton(theme) {
+        const button = document.querySelector(".theme-toggle");
+        button.textContent =
+          theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
+      }
+
+      // Initialize theme when page loads
+      document.addEventListener("DOMContentLoaded", initTheme);
+    </script>
+  </body>
+</html>

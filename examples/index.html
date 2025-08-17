@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Reset Test - All HTML Elements</title>
+    <link rel="stylesheet" href="scss/base/_reset.scss" />
+    <style>
+      /* Minimal styling just to make elements visible for testing */
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      section {
+        margin-bottom: 40px;
+        border: 1px solid #ddd;
+        padding: 20px;
+      }
+
+      h2 {
+        background: #f5f5f5;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      .element-demo {
+        margin: 10px 0;
+        padding: 5px;
+        border-left: 3px solid #007bff;
+        padding-left: 10px;
+      }
+
+      .element-demo::before {
+        content: attr(data-element) ": ";
+        font-weight: bold;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Reset Test Page - All HTML Elements</h1>
+      <p>
+        This page tests all HTML elements to verify the CSS reset is working
+        properly. All elements should have no default browser styling.
+      </p>
+    </header>
+
+    <main>
+      <!-- Text Content Elements -->
+      <section>
+        <h2>Text Content Elements</h2>
+
+        <div class="element-demo" data-element="h1-h6">
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+        </div>
+
+        <div class="element-demo" data-element="p">
+          <p>
+            This is a paragraph with some text content. It should have no
+            default margin or padding.
+          </p>
+          <p>Another paragraph to test spacing between paragraphs.</p>
+        </div>
+
+        <div class="element-demo" data-element="blockquote">
+          <blockquote>
+            This is a blockquote element. It should have no default styling.
+            <cite>Citation source</cite>
+          </blockquote>
+        </div>
+
+        <div class="element-demo" data-element="pre">
+          <pre>
+This is preformatted text.
+    It should preserve    whitespace
+        and line breaks.</pre
+          >
+        </div>
+
+        <div class="element-demo" data-element="hr">
+          <p>Text before horizontal rule</p>
+          <hr />
+          <p>Text after horizontal rule</p>
+        </div>
+      </section>
+
+      <!-- Inline Text Elements -->
+      <section>
+        <h2>Inline Text Elements</h2>
+
+        <div class="element-demo" data-element="inline-text">
+          <p>
+            <a href="#">Link</a> | <abbr title="Abbreviation">Abbr</abbr> |
+            <b>Bold</b> | <bdi>Bidirectional Isolation</bdi> |
+            <bdo dir="rtl">Bidirectional Override</bdo> |
+            <br />
+            <cite>Citation</cite> | <code>Code</code> |
+            <data value="12345">Data</data> | <dfn>Definition</dfn> |
+            <em>Emphasis</em> | <i>Italic</i> | <kbd>Keyboard Input</kbd> |
+            <mark>Highlighted</mark> | <q>Quote</q> |
+            <ruby>Ruby <rt>Annotation</rt></ruby> | <s>Strikethrough</s> |
+            <samp>Sample Output</samp> | <small>Small Text</small> |
+            <span>Span</span> | <strong>Strong</strong> | <sub>Subscript</sub> |
+            <sup>Superscript</sup> | <time datetime="2025-08-16">Time</time> |
+            <u>Underline</u> | <var>Variable</var> |
+            <wbr />Word<wbr />Break<wbr />Opportunity
+          </p>
+        </div>
+
+        <div class="element-demo" data-element="del-ins">
+          <p>
+            <del>Deleted text</del>
+            <ins>Inserted text</ins>
+          </p>
+        </div>
+      </section>
+
+      <!-- List Elements -->
+      <section>
+        <h2>List Elements</h2>
+
+        <div class="element-demo" data-element="ul">
+          <ul>
+            <li>Unordered list item 1</li>
+            <li>
+              Unordered list item 2
+              <ul>
+                <li>Nested item 1</li>
+                <li>Nested item 2</li>
+              </ul>
+            </li>
+            <li>Unordered list item 3</li>
+          </ul>
+        </div>
+
+        <div class="element-demo" data-element="ol">
+          <ol>
+            <li>Ordered list item 1</li>
+            <li>
+              Ordered list item 2
+              <ol>
+                <li>Nested item 1</li>
+                <li>Nested item 2</li>
+              </ol>
+            </li>
+            <li>Ordered list item 3</li>
+          </ol>
+        </div>
+
+        <div class="element-demo" data-element="dl">
+          <dl>
+            <dt>Definition Term 1</dt>
+            <dd>Definition Description 1</dd>
+            <dt>Definition Term 2</dt>
+            <dd>Definition Description 2</dd>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Form Elements -->
+      <section>
+        <h2>Form Elements</h2>
+
+        <div class="element-demo" data-element="form">
+          <form>
+            <fieldset>
+              <legend>Form Legend</legend>
+
+              <label for="text-input">Text Input:</label>
+              <input type="text" id="text-input" placeholder="Text input" />
+
+              <label for="email-input">Email Input:</label>
+              <input type="email" id="email-input" placeholder="Email input" />
+
+              <label for="password-input">Password Input:</label>
+              <input
+                type="password"
+                id="password-input"
+                placeholder="Password input"
+              />
+
+              <label for="number-input">Number Input:</label>
+              <input
+                type="number"
+                id="number-input"
+                placeholder="Number input"
+              />
+
+              <label for="search-input">Search Input:</label>
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Search input"
+              />
+
+              <label for="url-input">URL Input:</label>
+              <input type="url" id="url-input" placeholder="URL input" />
+
+              <label for="tel-input">Tel Input:</label>
+              <input type="tel" id="tel-input" placeholder="Tel input" />
+
+              <label for="date-input">Date Input:</label>
+              <input type="date" id="date-input" />
+
+              <label for="time-input">Time Input:</label>
+              <input type="time" id="time-input" />
+
+              <label for="color-input">Color Input:</label>
+              <input type="color" id="color-input" />
+
+              <label for="range-input">Range Input:</label>
+              <input type="range" id="range-input" />
+
+              <label for="file-input">File Input:</label>
+              <input type="file" id="file-input" />
+
+              <label> <input type="checkbox" /> Checkbox </label>
+
+              <label> <input type="radio" name="radio-group" /> Radio 1 </label>
+              <label> <input type="radio" name="radio-group" /> Radio 2 </label>
+
+              <label for="select">Select:</label>
+              <select id="select">
+                <optgroup label="Group 1">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                </optgroup>
+                <optgroup label="Group 2">
+                  <option>Option 3</option>
+                  <option>Option 4</option>
+                </optgroup>
+              </select>
+
+              <label for="textarea">Textarea:</label>
+              <textarea
+                id="textarea"
+                rows="4"
+                placeholder="Textarea content"
+              ></textarea>
+
+              <button type="submit">Submit Button</button>
+              <button type="reset">Reset Button</button>
+              <button type="button">Regular Button</button>
+
+              <input type="submit" value="Submit Input" />
+              <input type="reset" value="Reset Input" />
+              <input type="button" value="Button Input" />
+
+              <output for="range-input">Output element</output>
+
+              <progress value="50" max="100">Progress: 50%</progress>
+
+              <meter value="0.7" min="0" max="1">Meter: 70%</meter>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+      <!-- Table Elements -->
+      <section>
+        <h2>Table Elements</h2>
+
+        <div class="element-demo" data-element="table">
+          <table>
+            <caption>
+              Table Caption
+            </caption>
+            <thead>
+              <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+              </tr>
+              <tr>
+                <td>Cell 4</td>
+                <td>Cell 5</td>
+                <td>Cell 6</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Footer 1</td>
+                <td>Footer 2</td>
+                <td>Footer 3</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <!-- Media Elements -->
+      <section>
+        <h2>Media Elements</h2>
+
+        <div class="element-demo" data-element="img">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2NjYyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JbWFnZTwvdGV4dD48L3N2Zz4="
+            alt="Test image"
+          />
+        </div>
+
+        <div class="element-demo" data-element="figure">
+          <figure>
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2NjYyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5GaWd1cmU8L3RleHQ+PC9zdmc+"
+              alt="Figure image"
+            />
+            <figcaption>Figure caption</figcaption>
+          </figure>
+        </div>
+
+        <div class="element-demo" data-element="picture">
+          <picture>
+            <source
+              media="(min-width: 800px)"
+              srcset="
+                data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzAwZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+TGFyZ2U8L3RleHQ+PC9zdmc+
+              "
+            />
+            <img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2Y4MCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QaWN0dXJlPC90ZXh0Pjwvc3ZnPg=="
+              alt="Picture element"
+            />
+          </picture>
+        </div>
+
+        <div class="element-demo" data-element="svg">
+          <svg width="200" height="100">
+            <rect width="200" height="100" fill="#4CAF50" />
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              fill="white"
+            >
+              SVG Element
+            </text>
+          </svg>
+        </div>
+
+        <div class="element-demo" data-element="canvas">
+          <canvas width="200" height="100" style="border: 1px solid #ccc"
+            >Canvas not supported</canvas
+          >
+        </div>
+
+        <div class="element-demo" data-element="video">
+          <video controls width="300">
+            <source src="data:video/mp4;base64," type="video/mp4" />
+            Your browser doesn't support video.
+          </video>
+        </div>
+
+        <div class="element-demo" data-element="audio">
+          <audio controls>
+            <source src="data:audio/mpeg;base64," type="audio/mpeg" />
+            Your browser doesn't support audio.
+          </audio>
+        </div>
+      </section>
+
+      <!-- Interactive Elements -->
+      <section>
+        <h2>Interactive Elements</h2>
+
+        <div class="element-demo" data-element="details">
+          <details>
+            <summary>Details Summary (click to expand)</summary>
+            <p>
+              This content is hidden by default and shown when the details
+              element is opened.
+            </p>
+          </details>
+        </div>
+
+        <div class="element-demo" data-element="dialog">
+          <dialog>
+            <p>This is a dialog element</p>
+            <button>Close</button>
+          </dialog>
+        </div>
+      </section>
+
+      <!-- Semantic Elements -->
+      <section>
+        <h2>Semantic Elements</h2>
+
+        <div class="element-demo" data-element="semantic">
+          <article>
+            <header>Article Header</header>
+            <main>Article Main Content</main>
+            <section>Article Section</section>
+            <aside>Article Aside</aside>
+            <footer>Article Footer</footer>
+          </article>
+
+          <nav>Navigation</nav>
+
+          <address>
+            Contact Address<br />
+            123 Main St<br />
+            City, State 12345
+          </address>
+        </div>
+      </section>
+
+      <!-- Embedded Content -->
+      <section>
+        <h2>Embedded Content</h2>
+
+        <div class="element-demo" data-element="iframe">
+          <iframe
+            src="data:text/html;charset=utf-8,<h1>Iframe Content</h1>"
+            width="300"
+            height="100"
+          ></iframe>
+        </div>
+
+        <div class="element-demo" data-element="embed">
+          <embed
+            src="data:text/plain;charset=utf-8,Embed content"
+            type="text/plain"
+            width="300"
+            height="100"
+          />
+        </div>
+
+        <div class="element-demo" data-element="object">
+          <object
+            data="data:text/plain;charset=utf-8,Object content"
+            type="text/plain"
+            width="300"
+            height="100"
+          >
+            Object fallback content
+          </object>
+        </div>
+      </section>
+
+      <!-- Hidden Elements Test -->
+      <section>
+        <h2>Hidden Elements (should not be visible)</h2>
+
+        <div class="element-demo" data-element="hidden">
+          <p>Visible paragraph</p>
+          <p hidden>Hidden paragraph (should not be visible)</p>
+          <template>
+            <p>Template content (should not be visible)</p>
+          </template>
+          <p>Another visible paragraph</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>End of CSS Reset Test Page</p>
+    </footer>
+
+    <script>
+      // Add some interactivity for testing
+      document
+        .querySelector("canvas")
+        .getContext("2d")
+        .fillText("Canvas with JS", 10, 50);
+
+      // Test focus styles
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("CSS Reset Test Page Loaded");
+      });
+    </script>
+  </body>
+</html>

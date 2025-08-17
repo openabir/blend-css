@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlendCSS - Complete Color Palette Showcase</title>
+    <link rel="stylesheet" href="css/blend.css" />
+    <style>
+      /* Color showcase specific styles */
+      .color-showcase {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .color-family {
+        margin-bottom: 3rem;
+      }
+
+      .color-family h2 {
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--border-color-primary);
+      }
+
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .color-card {
+        border: 1px solid var(--border-color-primary);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+      }
+
+      .color-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .color-swatch {
+        height: 80px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      .color-info {
+        padding: 0.75rem;
+        background: var(--bg-color-primary);
+      }
+
+      .color-name {
+        font-weight: 600;
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+        color: var(--text-color-primary);
+      }
+
+      .color-value {
+        font-family: var(--font-family-mono);
+        font-size: 0.75rem;
+        color: var(--text-color-secondary);
+        background: var(--bg-color-muted);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .color-value:hover {
+        background: var(--bg-color-accent);
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 8px 16px;
+        background: var(--color-primary-600);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      .stats {
+        background: var(--bg-color-secondary);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        border: 1px solid var(--border-color-primary);
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--color-primary-600);
+      }
+
+      .stat-label {
+        font-size: 0.875rem;
+        color: var(--text-color-secondary);
+        margin-top: 0.25rem;
+      }
+
+      .copy-feedback {
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: var(--color-green-600);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1001;
+      }
+
+      .copy-feedback.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Dark color swatches need different text color */
+      .color-swatch.dark-swatch {
+        color: white;
+      }
+
+      .color-swatch.light-swatch {
+        color: #333;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+    <div class="copy-feedback" id="copyFeedback">
+      Color copied to clipboard!
+    </div>
+
+    <div class="color-showcase">
+      <header>
+        <h1>BlendCSS Color Palette</h1>
+        <p>
+          Complete showcase of all colors available in the BlendCSS framework.
+          Click any color value to copy it to your clipboard.
+        </p>
+      </header>
+
+      <div class="stats">
+        <h2>Color Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">22</div>
+            <div class="stat-label">Color Families</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">250+</div>
+            <div class="stat-label">Total Colors</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">11</div>
+            <div class="stat-label">Shades per Family</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Accessibility Focused</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRIMARY (Brand Orange) -->
+      <div class="color-family">
+        <h2>🧡 Primary (Brand Orange)</h2>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #fffbeb">
+              50
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-50</div>
+              <div class="color-value" onclick="copyToClipboard('#fffbeb')">
+                #fffbeb
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #fef3c7">
+              100
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-100</div>
+              <div class="color-value" onclick="copyToClipboard('#fef3c7')">
+                #fef3c7
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #fde68a">
+              200
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-200</div>
+              <div class="color-value" onclick="copyToClipboard('#fde68a')">
+                #fde68a
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #fcd34d">
+              300
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-300</div>
+              <div class="color-value" onclick="copyToClipboard('#fcd34d')">
+                #fcd34d
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #fbbf24">
+              400
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-400</div>
+              <div class="color-value" onclick="copyToClipboard('#fbbf24')">
+                #fbbf24
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #f59e0b">
+              500
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-500</div>
+              <div class="color-value" onclick="copyToClipboard('#f59e0b')">
+                #f59e0b
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #d97706">
+              600 ⭐
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-600 (Core)</div>
+              <div class="color-value" onclick="copyToClipboard('#d97706')">
+                #d97706
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #b45309">
+              700
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-700</div>
+              <div class="color-value" onclick="copyToClipboard('#b45309')">
+                #b45309
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #92400e">
+              800
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-800</div>
+              <div class="color-value" onclick="copyToClipboard('#92400e')">
+                #92400e
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #78350f">
+              900
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-900</div>
+              <div class="color-value" onclick="copyToClipboard('#78350f')">
+                #78350f
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #451a03">
+              950
+            </div>
+            <div class="color-info">
+              <div class="color-name">primary-950</div>
+              <div class="color-value" onclick="copyToClipboard('#451a03')">
+                #451a03
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEUTRAL -->
+      <div class="color-family">
+        <h2>⚫ Neutral</h2>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #f5f5f5">
+              100
+            </div>
+            <div class="color-info">
+              <div class="color-name">neutral-100</div>
+              <div class="color-value" onclick="copyToClipboard('#f5f5f5')">
+                #f5f5f5
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #e5e5e5">
+              200
+            </div>
+            <div class="color-info">
+              <div class="color-name">neutral-200</div>
+              <div class="color-value" onclick="copyToClipboard('#e5e5e5')">
+                #e5e5e5
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #d4d4d4">
+              300
+            </div>
+            <div class="color-info">
+              <div class="color-name">neutral-300</div>
+              <div class="color-value" onclick="copyToClipboard('#d4d4d4')">
+                #d4d4d4
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #a3a3a3">
+              400
+            </div>
+            <div class="color-info">
+              <div class="color-name">neutral-400</div>
+              <div class="color-value" onclick="copyToClipboard('#a3a3a3')">
+                #a3a3a3
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #737373">
+              500
+            </div>
+            <div class="color-info">
+              <div class="color-name">neutral-500</div>
+              <div class="color-value" onclick="copyToClipboard('#737373')">
+                #737373
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #525252">
+              600
+            </div>
+            <div class="color-info">
+              <div class="color-name">neutral-600</div>
+              <div class="color-value" onclick="copyToClipboard('#525252')">
+                #525252
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #404040">
+              700
+            </div>
+            <div class="color-info">
+              <div class="color-name">neutral-700</div>
+              <div class="color-value" onclick="copyToClipboard('#404040')">
+                #404040
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #262626">
+              800
+            </div>
+            <div class="color-info">
+              <div class="color-name">neutral-800</div>
+              <div class="color-value" onclick="copyToClipboard('#262626')">
+                #262626
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #171717">
+              900
+            </div>
+            <div class="color-info">
+              <div class="color-name">neutral-900</div>
+              <div class="color-value" onclick="copyToClipboard('#171717')">
+                #171717
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STONE -->
+      <div class="color-family">
+        <h2>🪨 Stone</h2>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #fafaf9">
+              50
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-50</div>
+              <div class="color-value" onclick="copyToClipboard('#fafaf9')">
+                #fafaf9
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #f5f5f4">
+              100
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-100</div>
+              <div class="color-value" onclick="copyToClipboard('#f5f5f4')">
+                #f5f5f4
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #e7e5e4">
+              200
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-200</div>
+              <div class="color-value" onclick="copyToClipboard('#e7e5e4')">
+                #e7e5e4
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #d6d3d1">
+              300
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-300</div>
+              <div class="color-value" onclick="copyToClipboard('#d6d3d1')">
+                #d6d3d1
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #a8a29e">
+              400
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-400</div>
+              <div class="color-value" onclick="copyToClipboard('#a8a29e')">
+                #a8a29e
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #78716c">
+              500
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-500</div>
+              <div class="color-value" onclick="copyToClipboard('#78716c')">
+                #78716c
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #57534e">
+              600
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-600</div>
+              <div class="color-value" onclick="copyToClipboard('#57534e')">
+                #57534e
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #44403c">
+              700
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-700</div>
+              <div class="color-value" onclick="copyToClipboard('#44403c')">
+                #44403c
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #292524">
+              800
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-800</div>
+              <div class="color-value" onclick="copyToClipboard('#292524')">
+                #292524
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #1c1917">
+              900
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-900</div>
+              <div class="color-value" onclick="copyToClipboard('#1c1917')">
+                #1c1917
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #0c0a09">
+              950
+            </div>
+            <div class="color-info">
+              <div class="color-name">stone-950</div>
+              <div class="color-value" onclick="copyToClipboard('#0c0a09')">
+                #0c0a09
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZINC -->
+      <div class="color-family">
+        <h2>🔗 Zinc</h2>
+        <div class="color-grid">
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #fafafa">
+              50
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-50</div>
+              <div class="color-value" onclick="copyToClipboard('#fafafa')">
+                #fafafa
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #f4f4f5">
+              100
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-100</div>
+              <div class="color-value" onclick="copyToClipboard('#f4f4f5')">
+                #f4f4f5
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #e4e4e7">
+              200
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-200</div>
+              <div class="color-value" onclick="copyToClipboard('#e4e4e7')">
+                #e4e4e7
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch light-swatch" style="background: #d4d4d8">
+              300
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-300</div>
+              <div class="color-value" onclick="copyToClipboard('#d4d4d8')">
+                #d4d4d8
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #a1a1aa">
+              400
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-400</div>
+              <div class="color-value" onclick="copyToClipboard('#a1a1aa')">
+                #a1a1aa
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #71717a">
+              500
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-500</div>
+              <div class="color-value" onclick="copyToClipboard('#71717a')">
+                #71717a
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #52525b">
+              600
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-600</div>
+              <div class="color-value" onclick="copyToClipboard('#52525b')">
+                #52525b
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #3f3f46">
+              700
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-700</div>
+              <div class="color-value" onclick="copyToClipboard('#3f3f46')">
+                #3f3f46
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #27272a">
+              800
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-800</div>
+              <div class="color-value" onclick="copyToClipboard('#27272a')">
+                #27272a
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #18181b">
+              900
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-900</div>
+              <div class="color-value" onclick="copyToClipboard('#18181b')">
+                #18181b
+              </div>
+            </div>
+          </div>
+          <div class="color-card">
+            <div class="color-swatch dark-swatch" style="background: #09090b">
+              950
+            </div>
+            <div class="color-info">
+              <div class="color-name">zinc-950</div>
+              <div class="color-value" onclick="copyToClipboard('#09090b')">
+                #09090b
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Continue with all other color families... Let me create a script to generate the remaining sections -->
+
+      <!-- SLATE -->
+      <div class="color-family">
+        <h2>🪨 Slate</h2>
+        <div class="color-grid" id="slate-colors"></div>
+      </div>
+
+      <!-- GRAY -->
+      <div class="color-family">
+        <h2>⚫ Gray</h2>
+        <div class="color-grid" id="gray-colors"></div>
+      </div>
+
+      <!-- RED -->
+      <div class="color-family">
+        <h2>🔴 Red</h2>
+        <div class="color-grid" id="red-colors"></div>
+      </div>
+
+      <!-- ORANGE -->
+      <div class="color-family">
+        <h2>🟠 Orange</h2>
+        <div class="color-grid" id="orange-colors"></div>
+      </div>
+
+      <!-- AMBER -->
+      <div class="color-family">
+        <h2>🟡 Amber</h2>
+        <div class="color-grid" id="amber-colors"></div>
+      </div>
+
+      <!-- YELLOW -->
+      <div class="color-family">
+        <h2>🟡 Yellow</h2>
+        <div class="color-grid" id="yellow-colors"></div>
+      </div>
+
+      <!-- LIME -->
+      <div class="color-family">
+        <h2>🟢 Lime</h2>
+        <div class="color-grid" id="lime-colors"></div>
+      </div>
+
+      <!-- GREEN -->
+      <div class="color-family">
+        <h2>🟢 Green</h2>
+        <div class="color-grid" id="green-colors"></div>
+      </div>
+
+      <!-- EMERALD -->
+      <div class="color-family">
+        <h2>💚 Emerald</h2>
+        <div class="color-grid" id="emerald-colors"></div>
+      </div>
+
+      <!-- TEAL -->
+      <div class="color-family">
+        <h2>🔵 Teal</h2>
+        <div class="color-grid" id="teal-colors"></div>
+      </div>
+
+      <!-- CYAN -->
+      <div class="color-family">
+        <h2>🔵 Cyan</h2>
+        <div class="color-grid" id="cyan-colors"></div>
+      </div>
+
+      <!-- SKY -->
+      <div class="color-family">
+        <h2>🌌 Sky</h2>
+        <div class="color-grid" id="sky-colors"></div>
+      </div>
+
+      <!-- BLUE -->
+      <div class="color-family">
+        <h2>🔵 Blue</h2>
+        <div class="color-grid" id="blue-colors"></div>
+      </div>
+
+      <!-- INDIGO -->
+      <div class="color-family">
+        <h2>🟣 Indigo</h2>
+        <div class="color-grid" id="indigo-colors"></div>
+      </div>
+
+      <!-- VIOLET -->
+      <div class="color-family">
+        <h2>🟣 Violet</h2>
+        <div class="color-grid" id="violet-colors"></div>
+      </div>
+
+      <!-- PURPLE -->
+      <div class="color-family">
+        <h2>🟣 Purple</h2>
+        <div class="color-grid" id="purple-colors"></div>
+      </div>
+
+      <!-- FUCHSIA -->
+      <div class="color-family">
+        <h2>🟣 Fuchsia</h2>
+        <div class="color-grid" id="fusch-colors"></div>
+      </div>
+
+      <!-- PINK -->
+      <div class="color-family">
+        <h2>🩷 Pink</h2>
+        <div class="color-grid" id="pink-colors"></div>
+      </div>
+
+      <!-- ROSE -->
+      <div class="color-family">
+        <h2>🌹 Rose</h2>
+        <div class="color-grid" id="rose-colors"></div>
+      </div>
+    </div>
+
+    <script>
+      // Color data extracted from your SCSS variables
+      const colorData = {
+        slate: {
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a",
+          950: "#020617",
+        },
+        gray: {
+          50: "#f9fafb",
+          100: "#f3f4f6",
+          200: "#e5e7eb",
+          300: "#d1d5db",
+          400: "#9ca3af",
+          500: "#6b7280",
+          600: "#4b5563",
+          700: "#374151",
+          800: "#1f2937",
+          900: "#111827",
+          950: "#030712",
+        },
+        red: {
+          50: "#fef2f2",
+          100: "#fee2e2",
+          200: "#fecaca",
+          300: "#fca5a5",
+          400: "#f87171",
+          500: "#ef4444",
+          600: "#dc2626",
+          700: "#b91c1c",
+          800: "#991b1b",
+          900: "#7f1d1d",
+          950: "#450a0a",
+        },
+        orange: {
+          50: "#fff7ed",
+          100: "#ffedd5",
+          200: "#fed7aa",
+          300: "#fdba74",
+          400: "#fb923c",
+          500: "#f97316",
+          600: "#ea580c",
+          700: "#c2410c",
+          800: "#9a3412",
+          900: "#7c2d12",
+          950: "#431407",
+        },
+        amber: {
+          50: "#fffbeb",
+          100: "#fef3c7",
+          200: "#fde68a",
+          300: "#fcd34d",
+          400: "#fbbf24",
+          500: "#f59e0b",
+          600: "#d97706",
+          700: "#b45309",
+          800: "#92400e",
+          900: "#78350f",
+          950: "#451a03",
+        },
+        yellow: {
+          50: "#fefce8",
+          100: "#fef9c3",
+          200: "#fef08a",
+          300: "#fde047",
+          400: "#facc15",
+          500: "#eab308",
+          600: "#ca8a04",
+          700: "#a16207",
+          800: "#854d0e",
+          900: "#713f12",
+          950: "#422006",
+        },
+        lime: {
+          50: "#f7fee7",
+          100: "#ecfccb",
+          200: "#d9f99d",
+          300: "#bef264",
+          400: "#a3e635",
+          500: "#84cc16",
+          600: "#65a30d",
+          700: "#4d7c0f",
+          800: "#3f6212",
+          900: "#365314",
+          950: "#1a2e05",
+        },
+        green: {
+          50: "#f0fdf4",
+          100: "#dcfce7",
+          200: "#bbf7d0",
+          300: "#86efac",
+          400: "#4ade80",
+          500: "#22c55e",
+          600: "#16a34a",
+          700: "#15803d",
+          800: "#166534",
+          900: "#14532d",
+          950: "#052e16",
+        },
+        emerald: {
+          50: "#ecfdf5",
+          100: "#d1fae5",
+          200: "#a7f3d0",
+          300: "#6ee7b7",
+          400: "#34d399",
+          500: "#10b981",
+          600: "#059669",
+          700: "#047857",
+          800: "#065f46",
+          900: "#064e3b",
+          950: "#022c22",
+        },
+        teal: {
+          50: "#f0fdfa",
+          100: "#ccfbf1",
+          200: "#99f6e4",
+          300: "#5eead4",
+          400: "#2dd4bf",
+          500: "#14b8a6",
+          600: "#0d9488",
+          700: "#0f766e",
+          800: "#115e59",
+          900: "#134e4a",
+          950: "#042f2e",
+        },
+        cyan: {
+          50: "#ecfeff",
+          100: "#cffafe",
+          200: "#a5f3fc",
+          300: "#67e8f9",
+          400: "#22d3ee",
+          500: "#06b6d4",
+          600: "#0891b2",
+          700: "#0e7490",
+          800: "#155e75",
+          900: "#164e63",
+          950: "#083344",
+        },
+        sky: {
+          50: "#f0f9ff",
+          100: "#e0f2fe",
+          200: "#bae6fd",
+          300: "#7dd3fc",
+          400: "#38bdf8",
+          500: "#0ea5e9",
+          600: "#0284c7",
+          700: "#0369a1",
+          800: "#075985",
+          900: "#0c4a6e",
+          950: "#082f49",
+        },
+        blue: {
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
+          800: "#1e40af",
+          900: "#1e3a8a",
+          950: "#172554",
+        },
+        indigo: {
+          50: "#eef2ff",
+          100: "#e0e7ff",
+          200: "#c7d2fe",
+          300: "#a5b4fc",
+          400: "#818cf8",
+          500: "#6366f1",
+          600: "#4f46e5",
+          700: "#4338ca",
+          800: "#3730a3",
+          900: "#312e81",
+          950: "#1e1b4b",
+        },
+        violet: {
+          50: "#f5f3ff",
+          100: "#ede9fe",
+          200: "#ddd6fe",
+          300: "#c4b5fd",
+          400: "#a78bfa",
+          500: "#8b5cf6",
+          600: "#7c3aed",
+          700: "#6d28d9",
+          800: "#5b21b6",
+          900: "#4c1d95",
+          950: "#1e1b4b",
+        },
+        purple: {
+          50: "#faf5ff",
+          100: "#f3e8ff",
+          200: "#e9d5ff",
+          300: "#d8b4fe",
+          400: "#c084fc",
+          500: "#a855f7",
+          600: "#9333ea",
+          700: "#7e22ce",
+          800: "#6b21a8",
+          900: "#581c87",
+          950: "#3b0764",
+        },
+        fusch: {
+          50: "#fdf4ff",
+          100: "#fae8ff",
+          200: "#f5d0fe",
+          300: "#f0abfc",
+          400: "#e879f9",
+          500: "#d946ef",
+          600: "#c026d3",
+          700: "#a21caf",
+          800: "#86198f",
+          900: "#701a75",
+          950: "#4a044e",
+        },
+        pink: {
+          50: "#fdf2f8",
+          100: "#fce7f3",
+          200: "#fbcfe8",
+          300: "#f9a8d4",
+          400: "#f472b6",
+          500: "#ec4899",
+          600: "#db2777",
+          700: "#be185d",
+          800: "#9d174d",
+          900: "#831843",
+          950: "#500724",
+        },
+        rose: {
+          50: "#fff1f2",
+          100: "#ffe4e6",
+          200: "#fecdd3",
+          300: "#fda4af",
+          400: "#fb7185",
+          500: "#f43f5e",
+          600: "#e11d48",
+          700: "#be123c",
+          800: "#9f1239",
+          900: "#881337",
+          950: "#4c0519",
+        },
+      };
+
+      // Function to determine if text should be light or dark based on background color
+      function getTextClass(hex) {
+        // Remove # if present
+        hex = hex.replace("#", "");
+
+        // Convert to RGB
+        const r = parseInt(hex.substr(0, 2), 16);
+        const g = parseInt(hex.substr(2, 2), 16);
+        const b = parseInt(hex.substr(4, 2), 16);
+
+        // Calculate luminance
+        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+        return luminance > 0.5 ? "light-swatch" : "dark-swatch";
+      }
+
+      // Function to generate color cards
+      function generateColorCards(colorFamily, colors) {
+        const container = document.getElementById(colorFamily + "-colors");
+        if (!container) return;
+
+        Object.entries(colors).forEach(([shade, hex]) => {
+          const card = document.createElement("div");
+          card.className = "color-card";
+
+          const textClass = getTextClass(hex);
+
+          card.innerHTML = `
+            <div class="color-swatch ${textClass}" style="background: ${hex}">${shade}</div>
+            <div class="color-info">
+              <div class="color-name">${colorFamily}-${shade}</div>
+              <div class="color-value" onclick="copyToClipboard('${hex}')">${hex}</div>
+            </div>
+          `;
+
+          container.appendChild(card);
+        });
+      }
+
+      // Generate all color families
+      Object.entries(colorData).forEach(([family, colors]) => {
+        generateColorCards(family, colors);
+      });
+
+      // Theme toggle functionality
+      function initTheme() {
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem("theme");
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+
+        const initialTheme =
+          savedTheme || (systemPrefersDark ? "dark" : "light");
+        html.setAttribute("data-theme", initialTheme);
+        updateToggleButton(initialTheme);
+      }
+
+      function toggleTheme() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute("data-theme") || "light";
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+        html.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+        updateToggleButton(newTheme);
+      }
+
+      function updateToggleButton(theme) {
+        const button = document.querySelector(".theme-toggle");
+        button.textContent =
+          theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
+      }
+
+      // Copy to clipboard functionality
+      function copyToClipboard(text) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            showCopyFeedback();
+          })
+          .catch((err) => {
+            console.error("Failed to copy: ", err);
+            // Fallback for older browsers
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            showCopyFeedback();
+          });
+      }
+
+      function showCopyFeedback() {
+        const feedback = document.getElementById("copyFeedback");
+        feedback.classList.add("show");
+        setTimeout(() => {
+          feedback.classList.remove("show");
+        }, 2000);
+      }
+
+      // Initialize theme when page loads
+      document.addEventListener("DOMContentLoaded", initTheme);
+    </script>
+  </body>
+</html>
