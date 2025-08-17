@@ -4,43 +4,43 @@
 
 /* Container for main content */
 main {
-  max-width: var(--container-4xl);
+  max-width: $container-4xl;
   margin: 0 auto;
-  padding: 0 var(--space-4);
+  padding: 0 $space-4;
 
   @media (min-width: 768px) {
-    padding: 0 var(--space-6);
+    padding: 0 $space-6;
   }
 }
 
 /* Article layout */
 article {
-  margin-bottom: var(--space-8);
+  margin-bottom: $space-8;
 
   header {
-    margin-bottom: var(--space-6);
+    margin-bottom: $space-6;
 
     h1,
     h2 {
-      margin-bottom: var(--space-2);
+      margin-bottom: $space-2;
     }
   }
 
   footer {
-    margin-top: var(--space-6);
-    padding-top: var(--space-4);
-    border-top: var(--border-width-1) solid var(--border-color-primary);
-    font-size: var(--font-size-sm);
+    margin-top: $space-6;
+    padding-top: $space-4;
+    border-top: $border-width-1 solid var(--border-color-primary);
+    font-size: $font-size-sm;
     color: var(--text-color-secondary);
   }
 }
 
 /* Section spacing */
 section {
-  margin-bottom: var(--space-8);
+  margin-bottom: $space-8;
 
   & + section {
-    margin-top: var(--space-8);
+    margin-top: $space-8;
   }
 }
 
@@ -51,7 +51,7 @@ nav {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: var(--space-6);
+    gap: $space-6;
 
     li {
       margin: 0;
@@ -59,9 +59,9 @@ nav {
 
     a {
       display: block;
-      padding: var(--space-2) var(--space-3);
-      border-radius: var(--border-radius-md);
-      transition: background-color var(--duration-150) var(--ease-in-out);
+      padding: $space-2 $space-3;
+      border-radius: $border-radius-md;
+      transition: background-color $duration-150 $ease-in-out;
 
       &:hover {
         background-color: var(--bg-color-muted);
@@ -73,24 +73,24 @@ nav {
 /* Address */
 address {
   font-style: normal;
-  line-height: var(--line-height-relaxed);
-  margin-bottom: var(--space-4);
+  line-height: $line-height-relaxed;
+  margin-bottom: $space-4;
 }
 
 /* Details and summary */
 details {
-  margin-bottom: var(--space-4);
-  border: var(--border-width-1) solid var(--border-color-primary);
-  border-radius: var(--border-radius-md);
+  margin-bottom: $space-4;
+  border: $border-width-1 solid var(--border-color-primary);
+  border-radius: $border-radius-md;
   overflow: hidden;
 }
 
 summary {
-  padding: var(--space-3) var(--space-4);
+  padding: $space-3 $space-4;
   background-color: var(--bg-color-secondary);
   cursor: pointer;
-  font-weight: var(--font-weight-medium);
-  transition: background-color var(--duration-150) var(--ease-in-out);
+  font-weight: $font-weight-medium;
+  transition: background-color $duration-150 $ease-in-out;
 
   &:hover {
     background-color: var(--bg-color-muted);
@@ -98,9 +98,9 @@ summary {
 }
 
 details[open] summary {
-  border-bottom: var(--border-width-1) solid var(--border-color-primary);
+  border-bottom: $border-width-1 solid var(--border-color-primary);
 }
 
 details > :not(summary) {
-  padding: var(--space-4);
+  padding: $space-4;
 }

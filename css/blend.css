@@ -485,95 +485,77 @@ bdo {
 }
 
 /* =========================================================
-   CSS Custom Properties (Variables) for BlendCSS Framework
-   Modern, scalable design tokens using CSS Variables
+   2. TYPOGRAPHY SYSTEM
+   ========================================================= */
+/* =========================================================
+   3. SPACING SYSTEM
+   ========================================================= */
+/* =========================================================
+   4. LAYOUT SYSTEM
+   ========================================================= */
+/* =========================================================
+   5. BORDER & RADIUS SYSTEM
+   ========================================================= */
+/* =========================================================
+   6. SHADOW SYSTEM
+   ========================================================= */
+/* =========================================================
+   7. ANIMATION & TRANSITION SYSTEM
+   ========================================================= */
+/* =========================================================
+   8. COMPONENT SPECIFIC VARIABLES
+   ========================================================= */
+/* =========================================================
+   9. UTILITY VARIABLES
+   ========================================================= */
+/* =========================================================
+   10. SEMANTIC TOKENS (Context-aware variables)
+   ========================================================= */
+/* =========================================================
+   CSS CUSTOM PROPERTIES (Exported from SCSS Variables)
    ========================================================= */
 :root {
-  /* =========================================================
-     1. COLOR SYSTEM
-     ========================================================= */
-  /* Primary Colors */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-primary-950: #172554;
-  /* Secondary Colors */
-  --color-secondary-50: #f8fafc;
-  --color-secondary-100: #f1f5f9;
-  --color-secondary-200: #e2e8f0;
-  --color-secondary-300: #cbd5e1;
-  --color-secondary-400: #94a3b8;
-  --color-secondary-500: #64748b;
-  --color-secondary-600: #475569;
-  --color-secondary-700: #334155;
-  --color-secondary-800: #1e293b;
-  --color-secondary-900: #0f172a;
-  --color-secondary-950: #020617;
-  /* Accent Colors */
-  --color-accent-50: #fdf4ff;
-  --color-accent-100: #fae8ff;
-  --color-accent-200: #f5d0fe;
-  --color-accent-300: #f0abfc;
-  --color-accent-400: #e879f9;
-  --color-accent-500: #d946ef;
-  --color-accent-600: #c026d3;
-  --color-accent-700: #a21caf;
-  --color-accent-800: #86198f;
-  --color-accent-900: #701a75;
-  --color-accent-950: #4a044e;
-  /* Semantic Colors */
-  --color-success-50: #f0fdf4;
-  --color-success-100: #dcfce7;
-  --color-success-200: #bbf7d0;
-  --color-success-300: #86efac;
-  --color-success-400: #4ade80;
+  --color-primary-50: #fffbeb;
+  --color-primary-100: #fef3c7;
+  --color-primary-200: #fde68a;
+  --color-primary-300: #fcd34d;
+  --color-primary-400: #fbbf24;
+  --color-primary-500: #f59e0b;
+  --color-primary-600: #d97706;
+  --color-primary-700: #b45309;
+  --color-primary-800: #92400e;
+  --color-primary-900: #78350f;
+  --color-primary-950: #451a03;
+  --color-secondary-50: #eff6ff;
+  --color-secondary-100: #dbeafe;
+  --color-secondary-200: #bfdbfe;
+  --color-secondary-300: #93c5fd;
+  --color-secondary-400: #60a5fa;
+  --color-secondary-500: #3b82f6;
+  --color-secondary-600: #2563eb;
+  --color-secondary-700: #1d4ed8;
+  --color-secondary-800: #1e40af;
+  --color-secondary-900: #1e3a8a;
+  --color-secondary-950: #172554;
+  --color-accent-50: #fffdf7;
+  --color-accent-100: #fffbeb;
+  --color-accent-200: #fef3c7;
+  --color-accent-300: #fde68a;
+  --color-accent-400: #facc15;
+  --color-accent-500: #eab308;
+  --color-accent-600: #ca8a04;
+  --color-accent-700: #a16207;
+  --color-accent-800: #854d0e;
+  --color-accent-900: #713f12;
+  --color-accent-950: #422006;
   --color-success-500: #22c55e;
   --color-success-600: #16a34a;
-  --color-success-700: #15803d;
-  --color-success-800: #166534;
-  --color-success-900: #14532d;
-  --color-success-950: #052e16;
-  --color-warning-50: #fffbeb;
-  --color-warning-100: #fef3c7;
-  --color-warning-200: #fde68a;
-  --color-warning-300: #fcd34d;
-  --color-warning-400: #fbbf24;
-  --color-warning-500: #f59e0b;
-  --color-warning-600: #d97706;
-  --color-warning-700: #b45309;
-  --color-warning-800: #92400e;
-  --color-warning-900: #78350f;
-  --color-warning-950: #451a03;
-  --color-error-50: #fef2f2;
-  --color-error-100: #fee2e2;
-  --color-error-200: #fecaca;
-  --color-error-300: #fca5a5;
-  --color-error-400: #f87171;
+  --color-warning-500: #eab308;
+  --color-warning-600: #ca8a04;
   --color-error-500: #ef4444;
   --color-error-600: #dc2626;
-  --color-error-700: #b91c1c;
-  --color-error-800: #991b1b;
-  --color-error-900: #7f1d1d;
-  --color-error-950: #450a0a;
-  --color-info-50: #ecfeff;
-  --color-info-100: #cffafe;
-  --color-info-200: #a5f3fc;
-  --color-info-300: #67e8f9;
-  --color-info-400: #22d3ee;
-  --color-info-500: #06b6d4;
-  --color-info-600: #0891b2;
-  --color-info-700: #0e7490;
-  --color-info-800: #155e75;
-  --color-info-900: #164e63;
-  --color-info-950: #083344;
-  /* Neutral/Gray Colors */
+  --color-info-500: #3b82f6;
+  --color-info-600: #2563eb;
   --color-neutral-0: #ffffff;
   --color-neutral-50: #fafafa;
   --color-neutral-100: #f5f5f5;
@@ -587,334 +569,37 @@ bdo {
   --color-neutral-900: #171717;
   --color-neutral-950: #0a0a0a;
   --color-neutral-1000: #000000;
-  /* =========================================================
-     2. TYPOGRAPHY SYSTEM
-     ========================================================= */
-  /* Font Families */
-  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
-  --font-family-serif: "Times New Roman", Times, serif;
-  --font-family-mono: "SFMono-Regular", Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  --font-family-display: var(--font-family-sans);
-  --font-family-body: var(--font-family-sans);
-  /* Font Weights */
-  --font-weight-thin: 100;
-  --font-weight-extralight: 200;
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
-  --font-weight-black: 900;
-  /* Font Sizes */
-  --font-size-xs: 0.75rem; /* 12px */
-  --font-size-sm: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-lg: 1.125rem; /* 18px */
-  --font-size-xl: 1.25rem; /* 20px */
-  --font-size-2xl: 1.5rem; /* 24px */
-  --font-size-3xl: 1.875rem; /* 30px */
-  --font-size-4xl: 2.25rem; /* 36px */
-  --font-size-5xl: 3rem; /* 48px */
-  --font-size-6xl: 3.75rem; /* 60px */
-  --font-size-7xl: 4.5rem; /* 72px */
-  --font-size-8xl: 6rem; /* 96px */
-  --font-size-9xl: 8rem; /* 128px */
-  /* Line Heights */
-  --line-height-none: 1;
-  --line-height-tight: 1.25;
-  --line-height-snug: 1.375;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.625;
-  --line-height-loose: 2;
-  /* Letter Spacing */
-  --letter-spacing-tighter: -0.05em;
-  --letter-spacing-tight: -0.025em;
-  --letter-spacing-normal: 0em;
-  --letter-spacing-wide: 0.025em;
-  --letter-spacing-wider: 0.05em;
-  --letter-spacing-widest: 0.1em;
-  /* =========================================================
-     3. SPACING SYSTEM
-     ========================================================= */
-  /* Base spacing unit */
-  --space-unit: 0.25rem; /* 4px */
-  /* Spacing Scale */
-  --space-0: 0;
-  --space-px: 1px;
-  --space-0-5: calc(var(--space-unit) * 0.5); /* 2px */
-  --space-1: calc(var(--space-unit) * 1); /* 4px */
-  --space-1-5: calc(var(--space-unit) * 1.5); /* 6px */
-  --space-2: calc(var(--space-unit) * 2); /* 8px */
-  --space-2-5: calc(var(--space-unit) * 2.5); /* 10px */
-  --space-3: calc(var(--space-unit) * 3); /* 12px */
-  --space-3-5: calc(var(--space-unit) * 3.5); /* 14px */
-  --space-4: calc(var(--space-unit) * 4); /* 16px */
-  --space-5: calc(var(--space-unit) * 5); /* 20px */
-  --space-6: calc(var(--space-unit) * 6); /* 24px */
-  --space-7: calc(var(--space-unit) * 7); /* 28px */
-  --space-8: calc(var(--space-unit) * 8); /* 32px */
-  --space-9: calc(var(--space-unit) * 9); /* 36px */
-  --space-10: calc(var(--space-unit) * 10); /* 40px */
-  --space-11: calc(var(--space-unit) * 11); /* 44px */
-  --space-12: calc(var(--space-unit) * 12); /* 48px */
-  --space-14: calc(var(--space-unit) * 14); /* 56px */
-  --space-16: calc(var(--space-unit) * 16); /* 64px */
-  --space-20: calc(var(--space-unit) * 20); /* 80px */
-  --space-24: calc(var(--space-unit) * 24); /* 96px */
-  --space-28: calc(var(--space-unit) * 28); /* 112px */
-  --space-32: calc(var(--space-unit) * 32); /* 128px */
-  --space-36: calc(var(--space-unit) * 36); /* 144px */
-  --space-40: calc(var(--space-unit) * 40); /* 160px */
-  --space-44: calc(var(--space-unit) * 44); /* 176px */
-  --space-48: calc(var(--space-unit) * 48); /* 192px */
-  --space-52: calc(var(--space-unit) * 52); /* 208px */
-  --space-56: calc(var(--space-unit) * 56); /* 224px */
-  --space-60: calc(var(--space-unit) * 60); /* 240px */
-  --space-64: calc(var(--space-unit) * 64); /* 256px */
-  --space-72: calc(var(--space-unit) * 72); /* 288px */
-  --space-80: calc(var(--space-unit) * 80); /* 320px */
-  --space-96: calc(var(--space-unit) * 96); /* 384px */
-  /* =========================================================
-     4. LAYOUT SYSTEM
-     ========================================================= */
-  /* Container Sizes */
-  --container-xs: 20rem; /* 320px */
-  --container-sm: 24rem; /* 384px */
-  --container-md: 28rem; /* 448px */
-  --container-lg: 32rem; /* 512px */
-  --container-xl: 36rem; /* 576px */
-  --container-2xl: 42rem; /* 672px */
-  --container-3xl: 48rem; /* 768px */
-  --container-4xl: 56rem; /* 896px */
-  --container-5xl: 64rem; /* 1024px */
-  --container-6xl: 72rem; /* 1152px */
-  --container-7xl: 80rem; /* 1280px */
-  --container-full: 100%;
-  /* Breakpoints */
-  --breakpoint-xs: 20rem; /* 320px */
-  --breakpoint-sm: 30rem; /* 480px */
-  --breakpoint-md: 48rem; /* 768px */
-  --breakpoint-lg: 64rem; /* 1024px */
-  --breakpoint-xl: 80rem; /* 1280px */
-  --breakpoint-2xl: 96rem; /* 1536px */
-  /* Z-Index Scale */
-  --z-index-hide: -1;
-  --z-index-auto: auto;
-  --z-index-base: 0;
-  --z-index-docked: 10;
-  --z-index-dropdown: 1000;
-  --z-index-sticky: 1100;
-  --z-index-banner: 1200;
-  --z-index-overlay: 1300;
-  --z-index-modal: 1400;
-  --z-index-popover: 1500;
-  --z-index-skipLink: 1600;
-  --z-index-toast: 1700;
-  --z-index-tooltip: 1800;
-  /* =========================================================
-     5. BORDER & RADIUS SYSTEM
-     ========================================================= */
-  /* Border Widths */
-  --border-width-0: 0;
-  --border-width-1: 1px;
-  --border-width-2: 2px;
-  --border-width-4: 4px;
-  --border-width-8: 8px;
-  /* Border Radius */
-  --border-radius-none: 0;
-  --border-radius-sm: 0.125rem; /* 2px */
-  --border-radius-base: 0.25rem; /* 4px */
-  --border-radius-md: 0.375rem; /* 6px */
-  --border-radius-lg: 0.5rem; /* 8px */
-  --border-radius-xl: 0.75rem; /* 12px */
-  --border-radius-2xl: 1rem; /* 16px */
-  --border-radius-3xl: 1.5rem; /* 24px */
-  --border-radius-full: 9999px;
-  /* =========================================================
-     6. SHADOW SYSTEM
-     ========================================================= */
-  /* Box Shadows */
-  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --shadow-base: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-    0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
-  --shadow-none: 0 0 #0000;
-  /* =========================================================
-     7. ANIMATION & TRANSITION SYSTEM
-     ========================================================= */
-  /* Transition Durations */
-  --duration-75: 75ms;
-  --duration-100: 100ms;
-  --duration-150: 150ms;
-  --duration-200: 200ms;
-  --duration-300: 300ms;
-  --duration-500: 500ms;
-  --duration-700: 700ms;
-  --duration-1000: 1000ms;
-  /* Transition Timing Functions */
-  --ease-linear: linear;
-  --ease-in: cubic-bezier(0.4, 0, 1, 1);
-  --ease-out: cubic-bezier(0, 0, 0.2, 1);
-  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-in-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  --ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  /* =========================================================
-     8. COMPONENT SPECIFIC VARIABLES
-     ========================================================= */
-  /* Buttons */
-  --button-padding-x: var(--space-4);
-  --button-padding-y: var(--space-2);
-  --button-font-size: var(--font-size-base);
-  --button-font-weight: var(--font-weight-medium);
-  --button-border-radius: var(--border-radius-md);
-  --button-border-width: var(--border-width-1);
-  --button-transition: all var(--duration-150) var(--ease-in-out);
-  /* Forms */
-  --input-padding-x: var(--space-3);
-  --input-padding-y: var(--space-2);
-  --input-font-size: var(--font-size-base);
-  --input-border-radius: var(--border-radius-md);
-  --input-border-width: var(--border-width-1);
-  --input-border-color: var(--color-neutral-300);
-  --input-focus-border-color: var(--color-primary-500);
-  --input-focus-ring-width: 3px;
-  --input-focus-ring-color: rgb(59 130 246 / 0.1);
-  /* Cards */
-  --card-padding: var(--space-6);
-  --card-border-radius: var(--border-radius-lg);
-  --card-border-width: var(--border-width-1);
-  --card-border-color: var(--color-neutral-200);
-  --card-shadow: var(--shadow-sm);
-  --card-background: var(--color-neutral-0);
-  /* Navigation */
-  --nav-height: 4rem;
-  --nav-padding-x: var(--space-6);
-  --nav-background: var(--color-neutral-0);
-  --nav-border-color: var(--color-neutral-200);
-  --nav-shadow: var(--shadow-sm);
-  /* Modals */
-  --modal-backdrop-color: rgb(0 0 0 / 0.5);
-  --modal-border-radius: var(--border-radius-lg);
-  --modal-shadow: var(--shadow-xl);
-  --modal-max-width: var(--container-lg);
-  --modal-padding: var(--space-6);
-  /* =========================================================
-     9. UTILITY VARIABLES
-     ========================================================= */
-  /* Common Values */
-  --full: 100%;
-  --half: 50%;
-  --third: 33.333333%;
-  --quarter: 25%;
-  --auto: auto;
-  --none: none;
-  --inherit: inherit;
-  --initial: initial;
-  --unset: unset;
-  /* Aspect Ratios */
-  --aspect-square: 1 / 1;
-  --aspect-video: 16 / 9;
-  --aspect-photo: 4 / 3;
-  --aspect-portrait: 3 / 4;
-  /* =========================================================
-     10. SEMANTIC TOKENS (Context-aware variables)
-     ========================================================= */
-  /* Text Colors */
-  --text-color-primary: var(--color-neutral-900);
-  --text-color-secondary: var(--color-neutral-600);
-  --text-color-muted: var(--color-neutral-500);
-  --text-color-inverse: var(--color-neutral-0);
-  --text-color-link: var(--color-primary-600);
-  --text-color-link-hover: var(--color-primary-700);
-  /* Background Colors */
-  --bg-color-primary: var(--color-neutral-0);
-  --bg-color-secondary: var(--color-neutral-50);
-  --bg-color-muted: var(--color-neutral-100);
-  --bg-color-accent: var(--color-primary-50);
-  --bg-color-inverse: var(--color-neutral-900);
-  /* Border Colors */
-  --border-color-primary: var(--color-neutral-200);
-  --border-color-secondary: var(--color-neutral-300);
-  --border-color-muted: var(--color-neutral-100);
-  --border-color-accent: var(--color-primary-200);
-  /* Focus Colors */
-  --focus-ring-color: var(--color-primary-500);
-  --focus-ring-offset-color: var(--color-neutral-0);
-  --focus-ring-width: 2px;
-  --focus-ring-offset-width: 2px;
+  --text-color-primary: #171717;
+  --text-color-secondary: #525252;
+  --text-color-muted: #737373;
+  --text-color-inverse: #ffffff;
+  --text-color-link: #d97706;
+  --text-color-link-hover: #b45309;
+  --bg-color-primary: #ffffff;
+  --bg-color-secondary: #fafafa;
+  --bg-color-muted: #f5f5f5;
+  --bg-color-accent: #fffbeb;
+  --bg-color-inverse: #171717;
+  --border-color-primary: #e5e5e5;
+  --border-color-secondary: #d4d4d4;
+  --border-color-muted: #f5f5f5;
+  --border-color-accent: #fde68a;
+  --focus-ring-color: #f59e0b;
+  --focus-ring-offset-color: #ffffff;
 }
 
 /* =========================================================
-   DARK MODE VARIABLES
+   DARK MODE OVERRIDES
+   These will be handled in separate theme files
    ========================================================= */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Override specific variables for dark mode */
-    --text-color-primary: var(--color-neutral-100);
-    --text-color-secondary: var(--color-neutral-300);
-    --text-color-muted: var(--color-neutral-400);
-    --text-color-inverse: var(--color-neutral-900);
-    --bg-color-primary: var(--color-neutral-900);
-    --bg-color-secondary: var(--color-neutral-800);
-    --bg-color-muted: var(--color-neutral-700);
-    --bg-color-inverse: var(--color-neutral-0);
-    --border-color-primary: var(--color-neutral-700);
-    --border-color-secondary: var(--color-neutral-600);
-    --border-color-muted: var(--color-neutral-800);
-    --card-background: var(--color-neutral-800);
-    --card-border-color: var(--color-neutral-700);
-    --nav-background: var(--color-neutral-900);
-    --nav-border-color: var(--color-neutral-700);
-    --input-border-color: var(--color-neutral-600);
-    --input-focus-ring-color: rgb(59 130 246 / 0.2);
-    --focus-ring-offset-color: var(--color-neutral-900);
-  }
-}
-/* =========================================================
-   EXPLICIT DARK MODE CLASS
-   ========================================================= */
-.dark {
-  /* Same overrides as above for explicit dark mode toggle */
-  --text-color-primary: var(--color-neutral-100);
-  --text-color-secondary: var(--color-neutral-300);
-  --text-color-muted: var(--color-neutral-400);
-  --text-color-inverse: var(--color-neutral-900);
-  --bg-color-primary: var(--color-neutral-900);
-  --bg-color-secondary: var(--color-neutral-800);
-  --bg-color-muted: var(--color-neutral-700);
-  --bg-color-inverse: var(--color-neutral-0);
-  --border-color-primary: var(--color-neutral-700);
-  --border-color-secondary: var(--color-neutral-600);
-  --border-color-muted: var(--color-neutral-800);
-  --card-background: var(--color-neutral-800);
-  --card-border-color: var(--color-neutral-700);
-  --nav-background: var(--color-neutral-900);
-  --nav-border-color: var(--color-neutral-700);
-  --input-border-color: var(--color-neutral-600);
-  --input-focus-ring-color: rgb(59 130 246 / 0.2);
-  --focus-ring-offset-color: var(--color-neutral-900);
-}
-
 /* =========================================================
    Typography Foundation - Uses design tokens from variables
    ========================================================= */
 /* Root font settings */
 html {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-normal);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
   color: var(--text-color-primary);
   background-color: var(--bg-color-primary);
 }
@@ -934,62 +619,62 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-display);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-tight);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 600;
+  line-height: 1.25;
   color: var(--text-color-primary);
-  margin-bottom: var(--space-4);
+  margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: var(--font-size-4xl);
+  font-size: 2.25rem;
 }
 
 h2 {
-  font-size: var(--font-size-3xl);
+  font-size: 1.875rem;
 }
 
 h3 {
-  font-size: var(--font-size-2xl);
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: var(--font-size-xl);
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: var(--font-size-lg);
+  font-size: 1.125rem;
 }
 
 h6 {
-  font-size: var(--font-size-base);
+  font-size: 1rem;
 }
 
 /* Text elements */
 p {
-  margin-bottom: var(--space-4);
+  margin-bottom: 1rem;
   color: var(--text-color-primary);
-  line-height: var(--line-height-relaxed);
+  line-height: 1.625;
 }
 
 /* Links */
 a {
   color: var(--text-color-link);
   text-decoration: none;
-  transition: color var(--duration-150) var(--ease-in-out);
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 a:hover, a:focus {
   color: var(--text-color-link-hover);
 }
 a:focus-visible {
-  outline: var(--focus-ring-width) solid var(--focus-ring-color);
-  outline-offset: var(--focus-ring-offset-width);
+  outline: 2px solid var(--focus-ring-color);
+  outline-offset: 2px;
 }
 
 /* Text styling elements */
 strong,
 b {
-  font-weight: var(--font-weight-bold);
+  font-weight: 700;
 }
 
 em,
@@ -998,7 +683,7 @@ i {
 }
 
 small {
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   color: var(--text-color-secondary);
 }
 
@@ -1006,20 +691,20 @@ small {
 code,
 kbd,
 samp {
-  font-family: var(--font-family-mono);
+  font-family: "SFMono-Regular", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.9em;
   background-color: var(--bg-color-muted);
-  padding: var(--space-1) var(--space-2);
-  border-radius: var(--border-radius-sm);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.125rem;
 }
 
 pre {
-  font-family: var(--font-family-mono);
+  font-family: "SFMono-Regular", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   background-color: var(--bg-color-muted);
-  padding: var(--space-4);
-  border-radius: var(--border-radius-md);
+  padding: 1rem;
+  border-radius: 0.375rem;
   overflow-x: auto;
-  margin-bottom: var(--space-4);
+  margin-bottom: 1rem;
 }
 pre code {
   background: none;
@@ -1028,9 +713,9 @@ pre code {
 
 /* Blockquotes */
 blockquote {
-  margin: var(--space-6) 0;
-  padding-left: var(--space-6);
-  border-left: var(--border-width-4) solid var(--border-color-accent);
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--border-color-accent);
   color: var(--text-color-secondary);
   font-style: italic;
 }
@@ -1038,9 +723,9 @@ blockquote {
 /* Horizontal rule */
 hr {
   border: none;
-  height: var(--border-width-1);
+  height: 1px;
   background-color: var(--border-color-primary);
-  margin: var(--space-8) 0;
+  margin: 2rem 0;
 }
 
 /* -----------------------
@@ -1052,8 +737,8 @@ hr {
 /* Lists */
 ul,
 ol {
-  margin-bottom: var(--space-4);
-  padding-left: var(--space-6);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
 }
 
 ul {
@@ -1061,8 +746,8 @@ ul {
 }
 ul ul {
   list-style-type: circle;
-  margin-top: var(--space-2);
-  margin-bottom: var(--space-2);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 ol {
@@ -1070,45 +755,45 @@ ol {
 }
 ol ol {
   list-style-type: lower-alpha;
-  margin-top: var(--space-2);
-  margin-bottom: var(--space-2);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 li {
-  margin-bottom: var(--space-2);
+  margin-bottom: 0.5rem;
 }
 
 /* Definition lists */
 dl {
-  margin-bottom: var(--space-4);
+  margin-bottom: 1rem;
 }
 
 dt {
-  font-weight: var(--font-weight-semibold);
-  margin-bottom: var(--space-1);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 dd {
-  margin-left: var(--space-4);
-  margin-bottom: var(--space-3);
+  margin-left: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: var(--space-6);
+  margin-bottom: 1.5rem;
 }
 
 th,
 td {
-  padding: var(--space-3);
+  padding: 0.75rem;
   text-align: left;
-  border-bottom: var(--border-width-1) solid var(--border-color-primary);
+  border-bottom: 1px solid var(--border-color-primary);
 }
 
 th {
-  font-weight: var(--font-weight-semibold);
+  font-weight: 600;
   background-color: var(--bg-color-secondary);
   color: var(--text-color-primary);
 }
@@ -1119,26 +804,26 @@ tr:hover {
 
 /* Forms */
 form {
-  margin-bottom: var(--space-6);
+  margin-bottom: 1.5rem;
 }
 
 fieldset {
-  border: var(--border-width-1) solid var(--border-color-primary);
-  border-radius: var(--border-radius-md);
-  padding: var(--space-4);
-  margin-bottom: var(--space-4);
+  border: 1px solid var(--border-color-primary);
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 legend {
-  font-weight: var(--font-weight-semibold);
-  padding: 0 var(--space-2);
+  font-weight: 600;
+  padding: 0 0.5rem;
   color: var(--text-color-primary);
 }
 
 label {
   display: block;
-  font-weight: var(--font-weight-medium);
-  margin-bottom: var(--space-2);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
   color: var(--text-color-primary);
 }
 
@@ -1146,33 +831,33 @@ input,
 textarea,
 select {
   width: 100%;
-  padding: var(--input-padding-y) var(--input-padding-x);
-  font-size: var(--input-font-size);
-  border: var(--input-border-width) solid var(--input-border-color);
-  border-radius: var(--input-border-radius);
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 0.375rem;
   background-color: var(--bg-color-primary);
   color: var(--text-color-primary);
-  margin-bottom: var(--space-4);
-  transition: border-color var(--duration-150) var(--ease-in-out);
+  margin-bottom: 1rem;
+  transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 input:focus,
 textarea:focus,
 select:focus {
   outline: none;
   border-color: var(--input-focus-border-color);
-  box-shadow: 0 0 0 var(--input-focus-ring-width) var(--input-focus-ring-color);
+  box-shadow: 0 0 0 3px var(--input-focus-ring-color);
 }
 
 button {
-  padding: var(--button-padding-y) var(--button-padding-x);
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
-  border: var(--button-border-width) solid var(--color-primary-600);
-  border-radius: var(--button-border-radius);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid var(--color-primary-600);
+  border-radius: 0.375rem;
   background-color: var(--color-primary-600);
   color: var(--color-neutral-0);
   cursor: pointer;
-  transition: var(--button-transition);
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 button:hover {
   background-color: var(--color-primary-700);
@@ -1180,7 +865,7 @@ button:hover {
 }
 button:focus {
   outline: none;
-  box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+  box-shadow: 0 0 0 2px var(--focus-ring-color);
 }
 button:disabled {
   opacity: 0.6;
@@ -1197,14 +882,14 @@ iframe {
 }
 
 figure {
-  margin: var(--space-6) 0;
+  margin: 1.5rem 0;
 }
 figure img {
-  border-radius: var(--border-radius-md);
+  border-radius: 0.375rem;
 }
 figure figcaption {
-  margin-top: var(--space-2);
-  font-size: var(--font-size-sm);
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
   color: var(--text-color-secondary);
   text-align: center;
 }
@@ -1214,41 +899,41 @@ figure figcaption {
    ========================================================= */
 /* Container for main content */
 main {
-  max-width: var(--container-4xl);
+  max-width: 56rem;
   margin: 0 auto;
-  padding: 0 var(--space-4);
+  padding: 0 1rem;
 }
 @media (min-width: 768px) {
   main {
-    padding: 0 var(--space-6);
+    padding: 0 1.5rem;
   }
 }
 
 /* Article layout */
 article {
-  margin-bottom: var(--space-8);
+  margin-bottom: 2rem;
 }
 article header {
-  margin-bottom: var(--space-6);
+  margin-bottom: 1.5rem;
 }
 article header h1,
 article header h2 {
-  margin-bottom: var(--space-2);
+  margin-bottom: 0.5rem;
 }
 article footer {
-  margin-top: var(--space-6);
-  padding-top: var(--space-4);
-  border-top: var(--border-width-1) solid var(--border-color-primary);
-  font-size: var(--font-size-sm);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color-primary);
+  font-size: 0.875rem;
   color: var(--text-color-secondary);
 }
 
 /* Section spacing */
 section {
-  margin-bottom: var(--space-8);
+  margin-bottom: 2rem;
 }
 section + section {
-  margin-top: var(--space-8);
+  margin-top: 2rem;
 }
 
 /* Navigation */
@@ -1257,16 +942,16 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: var(--space-6);
+  gap: 1.5rem;
 }
 nav ul li {
   margin: 0;
 }
 nav ul a {
   display: block;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--border-radius-md);
-  transition: background-color var(--duration-150) var(--ease-in-out);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 nav ul a:hover {
   background-color: var(--bg-color-muted);
@@ -1275,35 +960,35 @@ nav ul a:hover {
 /* Address */
 address {
   font-style: normal;
-  line-height: var(--line-height-relaxed);
-  margin-bottom: var(--space-4);
+  line-height: 1.625;
+  margin-bottom: 1rem;
 }
 
 /* Details and summary */
 details {
-  margin-bottom: var(--space-4);
-  border: var(--border-width-1) solid var(--border-color-primary);
-  border-radius: var(--border-radius-md);
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color-primary);
+  border-radius: 0.375rem;
   overflow: hidden;
 }
 
 summary {
-  padding: var(--space-3) var(--space-4);
+  padding: 0.75rem 1rem;
   background-color: var(--bg-color-secondary);
   cursor: pointer;
-  font-weight: var(--font-weight-medium);
-  transition: background-color var(--duration-150) var(--ease-in-out);
+  font-weight: 500;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 summary:hover {
   background-color: var(--bg-color-muted);
 }
 
 details[open] summary {
-  border-bottom: var(--border-width-1) solid var(--border-color-primary);
+  border-bottom: 1px solid var(--border-color-primary);
 }
 
 details > :not(summary) {
-  padding: var(--space-4);
+  padding: 1rem;
 }
 
 /* -----------------------

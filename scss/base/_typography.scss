@@ -4,9 +4,9 @@
 
 /* Root font settings */
 html {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-normal);
+  font-family: $font-family-body;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
   color: var(--text-color-primary);
   background-color: var(--bg-color-primary);
 }
@@ -26,44 +26,44 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-display);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-tight);
+  font-family: $font-family-display;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
   color: var(--text-color-primary);
-  margin-bottom: var(--space-4);
+  margin-bottom: $space-4;
 }
 
 h1 {
-  font-size: var(--font-size-4xl);
+  font-size: $font-size-4xl;
 }
 h2 {
-  font-size: var(--font-size-3xl);
+  font-size: $font-size-3xl;
 }
 h3 {
-  font-size: var(--font-size-2xl);
+  font-size: $font-size-2xl;
 }
 h4 {
-  font-size: var(--font-size-xl);
+  font-size: $font-size-xl;
 }
 h5 {
-  font-size: var(--font-size-lg);
+  font-size: $font-size-lg;
 }
 h6 {
-  font-size: var(--font-size-base);
+  font-size: $font-size-base;
 }
 
 /* Text elements */
 p {
-  margin-bottom: var(--space-4);
+  margin-bottom: $space-4;
   color: var(--text-color-primary);
-  line-height: var(--line-height-relaxed);
+  line-height: $line-height-relaxed;
 }
 
 /* Links */
 a {
   color: var(--text-color-link);
   text-decoration: none;
-  transition: color var(--duration-150) var(--ease-in-out);
+  transition: color $duration-150 $ease-in-out;
 
   &:hover,
   &:focus {
@@ -71,15 +71,15 @@ a {
   }
 
   &:focus-visible {
-    outline: var(--focus-ring-width) solid var(--focus-ring-color);
-    outline-offset: var(--focus-ring-offset-width);
+    outline: $focus-ring-width solid var(--focus-ring-color);
+    outline-offset: $focus-ring-offset-width;
   }
 }
 
 /* Text styling elements */
 strong,
 b {
-  font-weight: var(--font-weight-bold);
+  font-weight: $font-weight-bold;
 }
 
 em,
@@ -88,7 +88,7 @@ i {
 }
 
 small {
-  font-size: var(--font-size-sm);
+  font-size: $font-size-sm;
   color: var(--text-color-secondary);
 }
 
@@ -96,20 +96,20 @@ small {
 code,
 kbd,
 samp {
-  font-family: var(--font-family-mono);
+  font-family: $font-family-mono;
   font-size: 0.9em;
   background-color: var(--bg-color-muted);
-  padding: var(--space-1) var(--space-2);
-  border-radius: var(--border-radius-sm);
+  padding: $space-1 $space-2;
+  border-radius: $border-radius-sm;
 }
 
 pre {
-  font-family: var(--font-family-mono);
+  font-family: $font-family-mono;
   background-color: var(--bg-color-muted);
-  padding: var(--space-4);
-  border-radius: var(--border-radius-md);
+  padding: $space-4;
+  border-radius: $border-radius-md;
   overflow-x: auto;
-  margin-bottom: var(--space-4);
+  margin-bottom: $space-4;
 
   code {
     background: none;
@@ -119,9 +119,9 @@ pre {
 
 /* Blockquotes */
 blockquote {
-  margin: var(--space-6) 0;
-  padding-left: var(--space-6);
-  border-left: var(--border-width-4) solid var(--border-color-accent);
+  margin: $space-6 0;
+  padding-left: $space-6;
+  border-left: $border-width-4 solid var(--border-color-accent);
   color: var(--text-color-secondary);
   font-style: italic;
 }
@@ -129,7 +129,7 @@ blockquote {
 /* Horizontal rule */
 hr {
   border: none;
-  height: var(--border-width-1);
+  height: $border-width-1;
   background-color: var(--border-color-primary);
-  margin: var(--space-8) 0;
+  margin: $space-8 0;
 }

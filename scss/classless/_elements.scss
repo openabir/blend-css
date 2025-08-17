@@ -5,8 +5,8 @@
 /* Lists */
 ul,
 ol {
-  margin-bottom: var(--space-4);
-  padding-left: var(--space-6);
+  margin-bottom: $space-4;
+  padding-left: $space-6;
 }
 
 ul {
@@ -14,8 +14,8 @@ ul {
 
   ul {
     list-style-type: circle;
-    margin-top: var(--space-2);
-    margin-bottom: var(--space-2);
+    margin-top: $space-2;
+    margin-bottom: $space-2;
   }
 }
 
@@ -24,46 +24,46 @@ ol {
 
   ol {
     list-style-type: lower-alpha;
-    margin-top: var(--space-2);
-    margin-bottom: var(--space-2);
+    margin-top: $space-2;
+    margin-bottom: $space-2;
   }
 }
 
 li {
-  margin-bottom: var(--space-2);
+  margin-bottom: $space-2;
 }
 
 /* Definition lists */
 dl {
-  margin-bottom: var(--space-4);
+  margin-bottom: $space-4;
 }
 
 dt {
-  font-weight: var(--font-weight-semibold);
-  margin-bottom: var(--space-1);
+  font-weight: $font-weight-semibold;
+  margin-bottom: $space-1;
 }
 
 dd {
-  margin-left: var(--space-4);
-  margin-bottom: var(--space-3);
+  margin-left: $space-4;
+  margin-bottom: $space-3;
 }
 
 /* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: var(--space-6);
+  margin-bottom: $space-6;
 }
 
 th,
 td {
-  padding: var(--space-3);
+  padding: $space-3;
   text-align: left;
-  border-bottom: var(--border-width-1) solid var(--border-color-primary);
+  border-bottom: $border-width-1 solid var(--border-color-primary);
 }
 
 th {
-  font-weight: var(--font-weight-semibold);
+  font-weight: $font-weight-semibold;
   background-color: var(--bg-color-secondary);
   color: var(--text-color-primary);
 }
@@ -74,26 +74,26 @@ tr:hover {
 
 /* Forms */
 form {
-  margin-bottom: var(--space-6);
+  margin-bottom: $space-6;
 }
 
 fieldset {
-  border: var(--border-width-1) solid var(--border-color-primary);
-  border-radius: var(--border-radius-md);
-  padding: var(--space-4);
-  margin-bottom: var(--space-4);
+  border: $border-width-1 solid var(--border-color-primary);
+  border-radius: $border-radius-md;
+  padding: $space-4;
+  margin-bottom: $space-4;
 }
 
 legend {
-  font-weight: var(--font-weight-semibold);
-  padding: 0 var(--space-2);
+  font-weight: $font-weight-semibold;
+  padding: 0 $space-2;
   color: var(--text-color-primary);
 }
 
 label {
   display: block;
-  font-weight: var(--font-weight-medium);
-  margin-bottom: var(--space-2);
+  font-weight: $font-weight-medium;
+  margin-bottom: $space-2;
   color: var(--text-color-primary);
 }
 
@@ -101,33 +101,32 @@ input,
 textarea,
 select {
   width: 100%;
-  padding: var(--input-padding-y) var(--input-padding-x);
-  font-size: var(--input-font-size);
-  border: var(--input-border-width) solid var(--input-border-color);
-  border-radius: var(--input-border-radius);
+  padding: $input-padding-y $input-padding-x;
+  font-size: $input-font-size;
+  border: $input-border-width solid var(--input-border-color);
+  border-radius: $input-border-radius;
   background-color: var(--bg-color-primary);
   color: var(--text-color-primary);
-  margin-bottom: var(--space-4);
-  transition: border-color var(--duration-150) var(--ease-in-out);
+  margin-bottom: $space-4;
+  transition: border-color $duration-150 $ease-in-out;
 
   &:focus {
     outline: none;
     border-color: var(--input-focus-border-color);
-    box-shadow: 0 0 0 var(--input-focus-ring-width)
-      var(--input-focus-ring-color);
+    box-shadow: 0 0 0 $input-focus-ring-width var(--input-focus-ring-color);
   }
 }
 
 button {
-  padding: var(--button-padding-y) var(--button-padding-x);
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
-  border: var(--button-border-width) solid var(--color-primary-600);
-  border-radius: var(--button-border-radius);
+  padding: $button-padding-y $button-padding-x;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  border: $button-border-width solid var(--color-primary-600);
+  border-radius: $button-border-radius;
   background-color: var(--color-primary-600);
   color: var(--color-neutral-0);
   cursor: pointer;
-  transition: var(--button-transition);
+  transition: $button-transition;
 
   &:hover {
     background-color: var(--color-primary-700);
@@ -136,7 +135,7 @@ button {
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+    box-shadow: 0 0 0 $focus-ring-width var(--focus-ring-color);
   }
 
   &:disabled {
@@ -155,15 +154,15 @@ iframe {
 }
 
 figure {
-  margin: var(--space-6) 0;
+  margin: $space-6 0;
 
   img {
-    border-radius: var(--border-radius-md);
+    border-radius: $border-radius-md;
   }
 
   figcaption {
-    margin-top: var(--space-2);
-    font-size: var(--font-size-sm);
+    margin-top: $space-2;
+    font-size: $font-size-sm;
     color: var(--text-color-secondary);
     text-align: center;
   }
